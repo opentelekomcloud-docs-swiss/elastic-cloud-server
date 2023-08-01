@@ -1,3 +1,8 @@
-====================================================
-Welcome to the documentation of elastic-cloud-server
-====================================================
+Elastic Cloud Server
+====================
+
+.. directive_wrapper::
+   :class: container-sbv
+
+   .. service_card::
+      :service_type: ecs
