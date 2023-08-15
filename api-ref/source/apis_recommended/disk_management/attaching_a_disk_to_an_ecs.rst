@@ -1,0 +1,125 @@
+:original_name: en-us_topic_0022472987.html
+
+.. _en-us_topic_0022472987:
+
+Attaching a Disk to an ECS
+==========================
+
+Function
+--------
+
+This API is used to attach a disk to an ECS.
+
+URI
+---
+
+POST /v1/{project_id}/cloudservers/{server_id}/attachvolume
+
+:ref:`Table 1 <en-us_topic_0022472987__table35528365105553>` describes the parameters in the URI.
+
+.. _en-us_topic_0022472987__table35528365105553:
+
+.. table:: **Table 1** Parameter description
+
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------+
+   | Parameter             | Mandatory             | Description                                                                                         |
+   +=======================+=======================+=====================================================================================================+
+   | project_id            | Yes                   | Specifies the project ID.                                                                           |
+   |                       |                       |                                                                                                     |
+   |                       |                       | For details about how to obtain the ID, see :ref:`Obtaining a Project ID <en-us_topic_0022670701>`. |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------+
+   | server_id             | Yes                   | Specifies the ECS ID.                                                                               |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------+
+
+Request
+-------
+
+.. table:: **Table 2** Request parameters
+
+   +------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter        | Mandatory       | Type            | Description                                                                                                                                                                                                                                                                                |
+   +==================+=================+=================+============================================================================================================================================================================================================================================================================================+
+   | volumeAttachment | Yes             | Object          | Specifies the ECS attachment information. For details, see :ref:`Table 3 <en-us_topic_0022472987__table40707503151632>`.                                                                                                                                                                   |
+   +------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | dry_run          | No              | Boolean         | Specifies whether to check the request and attach the disk.                                                                                                                                                                                                                                |
+   |                  |                 |                 |                                                                                                                                                                                                                                                                                            |
+   |                  |                 |                 | -  **true**: indicates that only the request is sent, and no disk will be attached. Check items include mandatory parameters, request format, and service restrictions. If the check fails, the system returns an error. If the check result is as expected, the system properly responds. |
+   |                  |                 |                 | -  **false**: indicates that only the request is sent and the disk will be attached if the check result is as expected.                                                                                                                                                                    |
+   |                  |                 |                 |                                                                                                                                                                                                                                                                                            |
+   |                  |                 |                 | The default value is **false**.                                                                                                                                                                                                                                                            |
+   +------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. _en-us_topic_0022472987__table40707503151632:
+
+.. table:: **Table 3** **volumeAttachment** field description
+
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+   +=================+=================+=================+==========================================================================================================================================================================================================================================================================================================================================================================================================================================================+
+   | volumeId        | Yes             | String          | Specifies the ID of the disk to be attached. The value is in UUID format.                                                                                                                                                                                                                                                                                                                                                                                |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | device          | No              | String          | Indicates the disk device name.                                                                                                                                                                                                                                                                                                                                                                                                                          |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+   |                 |                 |                 | .. note::                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+   |                 |                 |                 |    -  The new disk device name cannot be the same as an existing one.                                                                                                                                                                                                                                                                                                                                                                                    |
+   |                 |                 |                 |    -  This parameter is mandatory for Xen ECSs. Set the parameter value to **/dev/sda** for the system disks of such ECSs and to **/dev/sd**\ *x* for data disks, where *x* is a letter in alphabetical order. For example, if there are two data disks, set the device names of the two data disks to **/dev/sdb** and **/dev/sdc**, respectively. If you set a device name starting with **/dev/vd**, the system uses **/dev/sd** by default.          |
+   |                 |                 |                 |    -  For KVM ECSs, set the parameter value to **/dev/vda** for system disks. The device names for data disks of KVM ECSs are optional. If the device names of data disks are required, set them in alphabetical order. For example, if there are two data disks, set the device names of the two data disks to **/dev/vdb** and **/dev/vdc**, respectively. If you set a device name starting with **/dev/sd**, the system uses **/dev/vd** by default. |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | volume_type     | No              | String          | Specifies the disk type.                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+   |                 |                 |                 | If **volumeId** is unavailable and **dry_run** is set to **true**, **volume_type** is available and must be specified.                                                                                                                                                                                                                                                                                                                                   |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | count           | No              | Integer         | Specifies the number of disks.                                                                                                                                                                                                                                                                                                                                                                                                                           |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+   |                 |                 |                 | If **volumeId** is unavailable and **dry_run** is set to **true**, **count** is available. If **count** is unavailable, the number of disks is **1** by default.                                                                                                                                                                                                                                                                                         |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | hw:passthrough  | No              | String          | -  If this parameter is set to **true**, the disk device type is SCSI, which allows ECS OSs to directly access the underlying storage media. SCSI reservation commands are supported.                                                                                                                                                                                                                                                                    |
+   |                 |                 |                 | -  If this parameter is set to **false**, the disk device type is VBD, which supports only simple SCSI read/write commands.                                                                                                                                                                                                                                                                                                                              |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+   |                 |                 |                 | If **volumeId** is unavailable and **dry_run** is set to **true**, **hw:passthrough** is available and must be specified.                                                                                                                                                                                                                                                                                                                                |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Response
+--------
+
+See :ref:`Responses (Task) <en-us_topic_0022067714>`.
+
+Example Request
+---------------
+
+.. code-block:: text
+
+   POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/attachvolume
+
+.. code-block::
+
+   {
+       "volumeAttachment": {
+            "volumeId": "a26887c6-c47b-4654-abb5-dfadf7d3f803",
+            "device": "/dev/sda",
+            "volume_type": "SSD",
+            "count": 5,
+            "hw:passthrough": "true"
+       },
+       "dry_run": false
+   }
+
+Example Response
+----------------
+
+.. code-block::
+
+   {
+       "job_id": "70a599e0-31e7-49b7-b260-868f441e862b"
+   }
+
+Returned Values
+---------------
+
+See :ref:`Returned Values for General Requests <en-us_topic_0022067716>`.
+
+Error Codes
+-----------
+
+See :ref:`Error Codes <en-us_topic_0022067717>`.
