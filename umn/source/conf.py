@@ -23,11 +23,21 @@ extensions = [
 
 otcdocs_auto_name = False
 otcdocs_auto_version = False
-otcdocs_search_environment = 'hc_swiss'
 
 project = 'Elastic Cloud Server'
 otcdocs_repo_name = 'opentelekomcloud-docs-swiss/elastic-cloud-server'
 # Those variables are required for edit/bug links
+
+# Those variables are needed for indexing into OpenSearch
+otcdocs_doc_environment = 'public'
+otcdocs_doc_link = '/elastic-cloud-server/umn/'
+otcdocs_doc_title = 'User Guide'
+otcdocs_doc_type = 'umn'
+otcdocs_service_category = 'compute'
+otcdocs_service_title = 'Elastic Cloud Server'
+otcdocs_service_type = 'ecs'
+otcdocs_search_environment = 'hc_swiss'
+otcdocs_search_url = "https://opensearch.eco.tsi-dev.otc-service.com/"
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
