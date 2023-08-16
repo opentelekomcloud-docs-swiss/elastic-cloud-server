@@ -1,0 +1,109 @@
+:original_name: en-us_topic_0020212653.html
+
+.. _en-us_topic_0020212653:
+
+Modifying the Specifications of an ECS
+======================================
+
+Function
+--------
+
+ECS specifications can be modified, for example, upgrading the vCPUs and memory, to meet service requirements. This API is used to modify ECS specifications.
+
+URI
+---
+
+POST /v1/{project_id}/cloudservers/{server_id}/resize
+
+:ref:`Table 1 <en-us_topic_0020212653__table29396722>` describes the parameters in the URI.
+
+.. _en-us_topic_0020212653__table29396722:
+
+.. table:: **Table 1** Parameter description
+
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------+
+   | Parameter             | Mandatory             | Description                                                                                         |
+   +=======================+=======================+=====================================================================================================+
+   | project_id            | Yes                   | Specifies the project ID.                                                                           |
+   |                       |                       |                                                                                                     |
+   |                       |                       | For details about how to obtain the ID, see :ref:`Obtaining a Project ID <en-us_topic_0022670701>`. |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------+
+   | server_id             | Yes                   | Specifies the ECS ID.                                                                               |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------+
+
+Request
+-------
+
+:ref:`Table 2 <en-us_topic_0020212653__table6742880>` describes the request parameters.
+
+.. _en-us_topic_0020212653__table6742880:
+
+.. table:: **Table 2** Request parameters
+
+   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                             |
+   +=================+=================+=================+=========================================================================================================================================+
+   | resize          | Yes             | Object          | Specifies the operation to modify ECS specifications. For details, see :ref:`Table 3 <en-us_topic_0020212653__table7657338>`.           |
+   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+   | dry_run         | No              | Boolean         | Specifies whether to only check the request and not modify the ECS specifications.                                                      |
+   |                 |                 |                 |                                                                                                                                         |
+   |                 |                 |                 | **true**: The request is sent and the ECS specifications are not modified. Check items include mandatory parameters and request format. |
+   |                 |                 |                 |                                                                                                                                         |
+   |                 |                 |                 | -  If the check fails, the system returns an error.                                                                                     |
+   |                 |                 |                 | -  If the check is successful, the system returns status code 202.                                                                      |
+   |                 |                 |                 |                                                                                                                                         |
+   |                 |                 |                 | **false**: The request is sent and the ECS specifications will be modified after the check is passed.                                   |
+   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+
+.. _en-us_topic_0020212653__table7657338:
+
+.. table:: **Table 3** **resize** field description
+
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                       |
+   +=================+=================+=================+===================================================================================================================================================================================================================+
+   | flavorRef       | Yes             | String          | Specifies the flavor ID of the ECS after the modification.                                                                                                                                                        |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | mode            | No              | String          | If the parameter value is **withStopServer**, the specifications of a running ECS can be modified.                                                                                                                |
+   |                 |                 |                 |                                                                                                                                                                                                                   |
+   |                 |                 |                 | If the parameter value is **withStopServer**, the modification process is as follows: The system automatically stops the ECS, modifies ECS specifications, and starts the ECS after the modification is complete. |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Response
+--------
+
+See :ref:`Responses (Task) <en-us_topic_0022067714>`.
+
+Example Request
+---------------
+
+.. code-block:: text
+
+   POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/resize
+
+.. code-block::
+
+   {
+   "resize": {
+           "flavorRef": "c3.15xlarge.2"
+       }
+   }
+
+Example Response
+----------------
+
+.. code-block::
+
+   {
+       "job_id": "70a599e0-31e7-49b7-b260-868f441e862b"
+   }
+
+Returned Values
+---------------
+
+See :ref:`Returned Values for General Requests <en-us_topic_0022067716>`.
+
+Error Codes
+-----------
+
+See :ref:`Error Codes <en-us_topic_0022067717>`.
