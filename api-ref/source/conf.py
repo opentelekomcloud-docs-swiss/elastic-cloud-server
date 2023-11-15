@@ -88,8 +88,6 @@ html_theme = 'otcdocs'
 # further. For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    "site_name": "Swiss Open Telekom Cloud Docs",
-    "logo_url": "https://docs-beta.sc.otc.t-systems.com",
 }
 
 # The name for this set of Sphinx documents.  If None, it defaults to
