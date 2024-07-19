@@ -58,7 +58,7 @@ Response
    +=========================+=======================+==================================================================================================+
    | maxTotalInstances       | Integer               | Specifies the maximum number of ECSs you can use.                                                |
    +-------------------------+-----------------------+--------------------------------------------------------------------------------------------------+
-   | maxTotalCores           | Integer               | Specifies the maximum number of CPU cores you can use.                                           |
+   | maxTotalCores           | Integer               | Specifies the maximum number of CPU cores that the current tenant can apply for.                 |
    +-------------------------+-----------------------+--------------------------------------------------------------------------------------------------+
    | maxTotalRAMSize         | Integer               | Specifies the maximum memory space (MB) you can use.                                             |
    +-------------------------+-----------------------+--------------------------------------------------------------------------------------------------+
@@ -105,6 +105,8 @@ Response
 
 Example Request
 ---------------
+
+Query the quotas of all resources in a project for a tenant.
 
 .. code-block:: text
 

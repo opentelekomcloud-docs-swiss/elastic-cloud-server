@@ -89,11 +89,11 @@ Response
 Example Request
 ---------------
 
+Bind the virtual IP address **192.168.0.7** to the NIC whose network ID is **d32019d3-bc6e-4319-9c1d-6722fc136a23**.
+
 .. code-block:: text
 
    PUT https://{endpoint}/v1/{project_id}/cloudservers/nics/{nic_id}
-
-.. code-block::
 
    {
        "nic": {

@@ -33,67 +33,70 @@ GET /v1/{project_id}/cloudservers/detail?flavor={flavor}&name={name}&status={sta
 
 .. table:: **Table 2** Query parameters
 
-   +-----------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter             | Mandatory       | Type            | Description                                                                                                                                                                                                                |
-   +=======================+=================+=================+============================================================================================================================================================================================================================+
-   | offset                | No              | Integer         | Specifies a page number.                                                                                                                                                                                                   |
-   |                       |                 |                 |                                                                                                                                                                                                                            |
-   |                       |                 |                 | The value must be greater than or equal to **0** and the default value is **1**.                                                                                                                                           |
-   |                       |                 |                 |                                                                                                                                                                                                                            |
-   |                       |                 |                 | If the value is **0**, the first page is displayed, which is the same as the value **1**.                                                                                                                                  |
-   |                       |                 |                 |                                                                                                                                                                                                                            |
-   |                       |                 |                 | You are advised to set this parameter to a value greater than or equal to 1.                                                                                                                                               |
-   +-----------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | flavor                | No              | String          | Specifies the ECS flavor ID.                                                                                                                                                                                               |
-   |                       |                 |                 |                                                                                                                                                                                                                            |
-   |                       |                 |                 | For details about the flavors that have been released, see "ECS Specifications and Types" in the *Elastic Cloud Server User Guide*.                                                                                        |
-   +-----------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | name                  | No              | String          | Specifies the ECS name, which is fuzzy-matched.                                                                                                                                                                            |
-   |                       |                 |                 |                                                                                                                                                                                                                            |
-   |                       |                 |                 | Periods (.) are supported to match any single characters except \\n and \\r. A period is equal to [^\\n\\r].                                                                                                               |
-   +-----------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | status                | No              | String          | Specifies the ECS status.                                                                                                                                                                                                  |
-   |                       |                 |                 |                                                                                                                                                                                                                            |
-   |                       |                 |                 | Options:                                                                                                                                                                                                                   |
-   |                       |                 |                 |                                                                                                                                                                                                                            |
-   |                       |                 |                 | **ACTIVE**, **BUILD**, **ERROR**, **HARD_REBOOT**, **MIGRATING**, **REBOOT**, **REBUILD**, **RESIZE**, **REVERT_RESIZE**, **SHUTOFF**, **VERIFY_RESIZE**, **DELETED**, **SHELVED**, **SHELVED_OFFLOADED**, and **UNKNOWN** |
-   |                       |                 |                 |                                                                                                                                                                                                                            |
-   |                       |                 |                 | For details, see :ref:`ECS Statuses <en-us_topic_0178420672>`.                                                                                                                                                             |
-   |                       |                 |                 |                                                                                                                                                                                                                            |
-   |                       |                 |                 | .. note::                                                                                                                                                                                                                  |
-   |                       |                 |                 |                                                                                                                                                                                                                            |
-   |                       |                 |                 |    When an ECS is in an intermediate state, the statuses that can be obtained are as follows:                                                                                                                              |
-   |                       |                 |                 |                                                                                                                                                                                                                            |
-   |                       |                 |                 |    -  **ACTIVE**: **ACTIVE**, **REBOOT**, **HARD_REBOOT**, **REBUILD**, or **MIGRATING**                                                                                                                                   |
-   |                       |                 |                 |    -  **SHUTOFF**: **SHUTOFF**, **RESIZE**, or **REBUILD**                                                                                                                                                                 |
-   |                       |                 |                 |    -  **ERROR**: **ERROR** or **REBUILD**                                                                                                                                                                                  |
-   |                       |                 |                 |    -  **VERIFY_RESIZE**: **VERIFY_RESIZE** or **REVERT_RESIZE**                                                                                                                                                            |
-   +-----------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | limit                 | No              | Integer         | Specifies the maximum number of ECSs on one page.                                                                                                                                                                          |
-   |                       |                 |                 |                                                                                                                                                                                                                            |
-   |                       |                 |                 | Each page contains 25 ECSs by default, and a maximum of 1000 ECSs are returned. For large volumes of data, you are advised to set the value to **100**.                                                                    |
-   +-----------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | tags                  | No              | String          | Obtains the ECSs with specified tags.                                                                                                                                                                                      |
-   +-----------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | not-tags              | No              | String          | Queries ECSs whose **tag** field does not contain the specified value.                                                                                                                                                     |
-   |                       |                 |                 |                                                                                                                                                                                                                            |
-   |                       |                 |                 | For example, if the queried ECS list should not contain BMSs, set this parameter as follows: not-tags=__type_baremetal                                                                                                     |
-   +-----------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | reservation_id        | No              | String          | Specifies the ID returned when ECSs are created in a batch by using OpenStack Nova API. This parameter is used to query ECSs created in a batch.                                                                           |
-   +-----------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | enterprise_project_id | No              | String          | Specifies the ECS associated with an enterprise project.                                                                                                                                                                   |
-   |                       |                 |                 |                                                                                                                                                                                                                            |
-   |                       |                 |                 | To obtain all enterprise project-associated ECSs of a user, set this parameter to **all_granted_eps**.                                                                                                                     |
-   |                       |                 |                 |                                                                                                                                                                                                                            |
-   |                       |                 |                 | .. note::                                                                                                                                                                                                                  |
-   |                       |                 |                 |                                                                                                                                                                                                                            |
-   |                       |                 |                 |    -  You must have been granted the **ecs:cloudServers:list** permission in the specified enterprise projects.                                                                                                            |
-   |                       |                 |                 |    -  **all_granted_eps** takes effect for a maximum of 100 enterprise projects.                                                                                                                                           |
-   +-----------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | ip                    | No              | String          | Specifies the filtering result for IPv4 addresses, which are fuzzy-matched.                                                                                                                                                |
-   |                       |                 |                 |                                                                                                                                                                                                                            |
-   |                       |                 |                 | These IP addresses are private IP addresses.                                                                                                                                                                               |
-   +-----------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Mandatory       | Type            | Description                                                                                                                                                                                                                    |
+   +=======================+=================+=================+================================================================================================================================================================================================================================+
+   | offset                | No              | Integer         | Specifies the page number.                                                                                                                                                                                                     |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 | The value must be greater than or equal to **0** and the default value is **1**.                                                                                                                                               |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 | If the value is **0**, the first page is displayed, which is the same as the value **1**.                                                                                                                                      |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 | You are advised to set this parameter to a value greater than or equal to 1.                                                                                                                                                   |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | flavor                | No              | String          | Specifies the ECS flavor ID.                                                                                                                                                                                                   |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 | For details about the flavors that have been released, see "ECS Specifications and Types" in the *Elastic Cloud Server User Guide*.                                                                                            |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | name                  | No              | String          | Specifies the ECS name, which is fuzzy-matched.                                                                                                                                                                                |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 | Periods (.) are supported to match any single characters except \\n and \\r. A period is equal to [^\\n\\r].                                                                                                                   |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | status                | No              | String          | Specifies the ECS status.                                                                                                                                                                                                      |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 | Options:                                                                                                                                                                                                                       |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 | **ACTIVE**, **BUILD**, **ERROR**, **HARD_REBOOT**, **MIGRATING**, **REBOOT**, **REBUILD**, **RESIZE**, **REVERT_RESIZE**, **SHUTOFF**, **VERIFY_RESIZE**, **DELETED**, **SHELVED**, **SHELVED_OFFLOADED**, and **UNKNOWN**     |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 | For details, see :ref:`ECS Statuses <en-us_topic_0178420672>`.                                                                                                                                                                 |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 | .. note::                                                                                                                                                                                                                      |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 |    When an ECS is in an intermediate state, the statuses that can be obtained are as follows:                                                                                                                                  |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 |    -  **ACTIVE**: **ACTIVE**, **REBOOT**, **HARD_REBOOT**, **REBUILD**, **MIGRATING**, or **RESIZE**                                                                                                                           |
+   |                       |                 |                 |    -  **SHUTOFF**: **SHUTOFF**, **RESIZE**, or **REBUILD**                                                                                                                                                                     |
+   |                       |                 |                 |    -  **ERROR**: **ERROR** or **REBUILD**                                                                                                                                                                                      |
+   |                       |                 |                 |    -  **VERIFY_RESIZE**: **VERIFY_RESIZE** or **REVERT_RESIZE**                                                                                                                                                                |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | limit                 | No              | Integer         | Specifies the maximum number of ECSs on one page.                                                                                                                                                                              |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 | Each page contains 25 ECSs by default, and a maximum of 1,000 ECSs are returned. For large volumes of data, you are advised to set the value to **200**.                                                                       |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | tags                  | No              | String          | Obtains the ECSs with specified tags.                                                                                                                                                                                          |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | not-tags              | No              | String          | Queries ECSs whose **tag** field does not contain the specified value.                                                                                                                                                         |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 | For example, if the queried ECS list should not contain BMSs, set this parameter as follows: not-tags=__type_baremetal                                                                                                         |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | reservation_id        | No              | String          | Specifies the ID returned when ECSs are created in a batch by using OpenStack Nova API. This parameter is used to query ECSs created in a batch.                                                                               |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | enterprise_project_id | No              | String          | Specifies the ECS associated with an enterprise project.                                                                                                                                                                       |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 | To obtain all enterprise project-associated ECSs of a user, set this parameter to **all_granted_eps**.                                                                                                                         |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 | .. note::                                                                                                                                                                                                                      |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 |    -  You must have been granted the **ecs:cloudServers:list** permission in the specified enterprise projects.                                                                                                                |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 |       If you only have permissions for one enterprise project, this parameter must be specified to query the ECSs bound to the specified enterprise projects. Otherwise, an error is reported due to insufficient permissions. |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 |    -  **all_granted_eps** takes effect for a maximum of 100 enterprise projects.                                                                                                                                               |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | ip                    | No              | String          | Specifies the filtering result for IPv4 addresses, which are fuzzy-matched.                                                                                                                                                    |
+   |                       |                 |                 |                                                                                                                                                                                                                                |
+   |                       |                 |                 | These IP addresses are private IP addresses.                                                                                                                                                                                   |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Request
 -------
@@ -120,6 +123,8 @@ Response
 Example Request
 ---------------
 
+Query details about ECSs. Ten records are displayed on each page, starting from the first page.
+
 .. code-block:: text
 
    GET https://{endpoint}/v1/{project_id}/cloudservers/detail?offset=1&limit=10
@@ -135,7 +140,7 @@ Example Response
            {
                "fault":null,
                "id":"b37fd80e-ac67-4d02-b9f1-9891c9c0fabf",
-               "name":"ecs-yuankai2",
+               "name":"ecs-5e70",
                "addresses":{
                    "164489f6-cbf7-45b4-b6d0-d407c48cf7fc":[
                        {
@@ -156,10 +161,10 @@ Example Response
                },
                "flavor":{
                    "disk":"0",
-                   "vcpus":"1",
+                   "vcpus":"2",
                    "ram":"1024",
-                   "id":"c1.medium",
-                   "name":"c1.medium"
+                   "id":"c3.large.2",
+                   "name":"c3.large.2"
                },
                "accessIPv4":"",
                "accessIPv6":"",
@@ -172,7 +177,7 @@ Example Response
                "created":"2018-08-13T13:46:09Z",
                "metadata":{
                    "metering.image_id":"af60e0d5-6952-4f3d-b0ed-31bb19d4a692",
-                   "metering.resourcespeccode":"c1.medium.linux",
+                   "metering.resourcespeccode":"c3.large.2.linux",
                    "image_name":"HEC_Public_Cloudinit_CentOS_7.4_64bit",
                    "metering.product_id":"00301-253164-0--0",
                    "os_bit":"64",
@@ -212,10 +217,12 @@ Example Response
                "OS-DCF:diskConfig":"MANUAL",
                "OS-EXT-AZ:availability_zone":"az1-dc1",
                "os:scheduler_hints":{
-
+                   "guestos_product_name":[
+                       "KVM Virtual Machine"
+                   ]
                },
                "OS-EXT-SRV-ATTR:root_device_name":"/dev/sda",
-               "OS-EXT-SRV-ATTR:ramdisk_id":"",
+               "OS-EXT-SRV-ATTR:ramdisk_id":"8999878c-4a62-4014-89be-1743ff3a5daf",
                "enterprise_project_id":"441d5677-b76a-4dd4-a97a-ef7fd633c095",
                "OS-EXT-SRV-ATTR:user_data":"IyEvYmluL2Jhc2gKZWNobyAncm9vdDokNiRKQ2FzUWQkbm5wVmhJUFZlNVMwc3pXbnJGLnZVZ1FCWk4xTEo5Vy8wd09WTmFZaWpBRXdtRnhuQmZaTllVZXhBWktVWFVTeVhEeERuSUMzV2JjZEJyQUVBZkZvLy8nIHwgY2hwYXNzd2QgLWU7",
                "OS-SRV-USG:launched_at":"2018-08-13T13:46:46.000000",
@@ -258,10 +265,10 @@ Example Response
                },
                "flavor":{
                    "disk":"0",
-                   "vcpus":"1",
+                   "vcpus":"2",
                    "ram":"1024",
-                   "id":"c1.medium",
-                   "name":"c1.medium"
+                   "id":"c3.large.2",
+                   "name":"c3.large.2"
                },
                "accessIPv4":"",
                "accessIPv6":"",
@@ -275,7 +282,7 @@ Example Response
                "metadata":{
                    "metering.image_id":"af60e0d5-6952-4f3d-b0ed-31bb19d4a692",
                    "metering.imagetype":"gold",
-                   "metering.resourcespeccode":"c1.medium.linux",
+                   "metering.resourcespeccode":"c3.large.2.linux",
                    "image_name":"HEC_Public_Cloudinit_CentOS_7.4_64bit",
                    "metering.resourcetype":"1",
                    "os_bit":"64",
@@ -284,7 +291,8 @@ Example Response
                    "charging_mode":"0"
                },
                "tags":[
-
+                   "_sys_root_resource_id=9d81b37c-455f-4528-b0ab-a6abcd0a330b",
+                   "_sys_root_resource_type=xxx.resource.type.vm"
                ],
                "description":"ecs-f680",
                "locked":false,
@@ -308,10 +316,12 @@ Example Response
                "OS-DCF:diskConfig":"MANUAL",
                "OS-EXT-AZ:availability_zone":"az1-dc1",
                "os:scheduler_hints":{
-
+                   "guestos_product_name":[
+                       "KVM Virtual Machine"
+                   ]
                },
                "OS-EXT-SRV-ATTR:root_device_name":"/dev/sda",
-               "OS-EXT-SRV-ATTR:ramdisk_id":"",
+               "OS-EXT-SRV-ATTR:ramdisk_id":"8999878c-4a62-4026-92be-1743ff3a5daf",
                "enterprise_project_id":"441d5677-b76a-4dd4-a97a-ef7fd633c095",
                "OS-EXT-SRV-ATTR:user_data":"IyEvYmluL2Jhc2gKZWNobyAncm9vdDokNiR5aG9aeFIkVE00OWlwSGQ2OEFWcjlTMTFXNEZrZmFYTENVbEkvd0xVTmdSVjhOb0dCem5WOWFsU1lEN0ZNSHc0VmtwdU9GOERyLncudGUzVmRHLnVmY005elVZSDEnIHwgY2hwYXNzd2QgLWU7",
                "OS-SRV-USG:launched_at":"2018-08-13T13:38:53.000000",
@@ -349,10 +359,10 @@ Example Response
                },
                "flavor":{
                    "disk":"0",
-                   "vcpus":"1",
+                   "vcpus":"2",
                    "ram":"1024",
-                   "id":"c1.medium",
-                   "name":"c1.medium"
+                   "id":"c3.large.2",
+                   "name":"c3.large.2"
                },
                "accessIPv4":"",
                "accessIPv6":"",
@@ -366,7 +376,7 @@ Example Response
                "metadata":{
                    "metering.image_id":"af60e0d5-6952-4f3d-b0ed-31bb19d4a692",
                    "metering.imagetype":"gold",
-                   "metering.resourcespeccode":"c1.medium.linux",
+                   "metering.resourcespeccode":"c3.large.2.linux",
                    "image_name":"HEC_Public_Cloudinit_CentOS_7.4_64bit",
                    "metering.resourcetype":"1",
                    "os_bit":"64",
@@ -375,7 +385,7 @@ Example Response
                    "charging_mode":"0"
                },
                "tags":[
-
+                  "combined_order_id=CBRCS231010102024YL8962"
                ],
                "description":"ecs-3993",
                "locked":false,
@@ -400,10 +410,12 @@ Example Response
                "OS-DCF:diskConfig":"MANUAL",
                "OS-EXT-AZ:availability_zone":"az1-dc1",
                "os:scheduler_hints":{
-
+                   "guestos_product_name":[
+                       "KVM Virtual Machine"
+                   ]
                },
                "OS-EXT-SRV-ATTR:root_device_name":"/dev/sda",
-               "OS-EXT-SRV-ATTR:ramdisk_id":"",
+               "OS-EXT-SRV-ATTR:ramdisk_id":"8999878c-4a25-4014-92be-1743ff3a5daf",
                "enterprise_project_id":"441d5677-b76a-4dd4-a97a-ef7fd633c095",
                "OS-SRV-USG:launched_at":"2018-08-13T13:38:24.000000",
                "OS-EXT-SRV-ATTR:kernel_id":"",
@@ -443,10 +455,10 @@ Example Response
                },
                "flavor":{
                    "disk":"0",
-                   "vcpus":"1",
+                   "vcpus":"2",
                    "ram":"1024",
-                   "id":"c1.medium",
-                   "name":"c1.medium"
+                   "id":"c3.large.2",
+                   "name":"c3.large.2"
                },
                "accessIPv4":"",
                "accessIPv6":"",
@@ -462,7 +474,7 @@ Example Response
                    "sadfasfasf":"sdffffd",
                    "metering.order_id":"CS180813193577ORO",
                    "metering.imagetype":"gold",
-                   "metering.resourcespeccode":"c1.medium.win",
+                   "metering.resourcespeccode":"c3.large.2.win",
                    "metering.image_id":"65cb40e6-f67e-4bef-a1e7-808166a5999d",
                    "image_name":"HEC_Public_Windows2008R2_Ent_64bit40G_English",
                    "aaaaaa":"0",
@@ -475,7 +487,8 @@ Example Response
                    "charging_mode":"1"
                },
                "tags":[
-
+                   "_sys_root_resource_id=4514d9b0-d611-4744-bdf9-60802fd5198a",
+                   "_sys_root_resource_type=xxx.resource.type.vm"
                ],
                "description":"ecs-1f30",
                "locked":false,
@@ -500,10 +513,12 @@ Example Response
                "OS-DCF:diskConfig":"MANUAL",
                "OS-EXT-AZ:availability_zone":"az1-dc1",
                "os:scheduler_hints":{
-
+                   "guestos_product_name":[
+                       "KVM Virtual Machine"
+                   ]
                },
                "OS-EXT-SRV-ATTR:root_device_name":"/dev/sda",
-               "OS-EXT-SRV-ATTR:ramdisk_id":"",
+               "OS-EXT-SRV-ATTR:ramdisk_id":"8999878c-4a62-4014-92be-1743ff3a5daf",
                "enterprise_project_id":"441d5677-b76a-4dd4-a97a-ef7fd633c095",
                "OS-SRV-USG:launched_at":"2018-08-13T11:57:53.576640",
                "OS-EXT-SRV-ATTR:kernel_id":"",

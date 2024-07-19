@@ -10,6 +10,8 @@ Function
 
 This API is used to reinstall an ECS OS.
 
+This API is an asynchronous API. After the OS reinstallation request is successfully delivered, a job ID is returned. This does not mean the reinstallation is complete. You need to call the API by referring to :ref:`Querying Task Execution Status <en-us_topic_0022225398>` to query the job status. The SUCCESS status indicates that the reinstallation is successful.
+
 After this API is called, the system uninstalls the system disk, uses the original image to create a system disk, and attaches it to the ECS. In this way, the OS is reinstalled.
 
 This API supports the images without Cloud-Init or Cloudbase-Init installed. Otherwise, use the API described in :ref:`Reinstalling an ECS OS (Using an Image with Cloud-Init Installed) <en-us_topic_0067876349>`.
@@ -80,16 +82,16 @@ Request
 
 .. table:: **Table 4** **metadata** field description
 
-   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                                                                             |
-   +=================+=================+=================+=========================================================================================================================================================+
-   | BYOL            | No              | String          | Specifies whether a user has the license of an image.                                                                                                   |
-   |                 |                 |                 |                                                                                                                                                         |
-   |                 |                 |                 | -  If this parameter is set to **true**, the license file delivered with the image is used, indicating that BYOL is used.                               |
-   |                 |                 |                 | -  If this parameter is set to a value other than **true**, BYOL is not used, and the license file provided by the cloud service platform must be used. |
-   |                 |                 |                 |                                                                                                                                                         |
-   |                 |                 |                 | The default value is not **true**, indicating that BYOL is not used.                                                                                    |
-   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                                     |
+   +=================+=================+=================+=================================================================================================================================================+
+   | BYOL            | No              | String          | Specifies whether a user has the license of an image.                                                                                           |
+   |                 |                 |                 |                                                                                                                                                 |
+   |                 |                 |                 | -  If this parameter is set to **true**, the license file delivered with the image is used, indicating that BYOL is used.                       |
+   |                 |                 |                 | -  If this parameter is set to a value other than **true**, BYOL is not used, and the license file provided by the cloud platform must be used. |
+   |                 |                 |                 |                                                                                                                                                 |
+   |                 |                 |                 | The default value is not **true**, indicating that BYOL is not used.                                                                            |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Response
 --------
@@ -99,11 +101,11 @@ For details, see :ref:`Responses (Task) <en-us_topic_0022067714>`.
 Example Request
 ---------------
 
+Reinstall an OS and use the key pair for login authentication after the reinstallation.
+
 .. code-block:: text
 
    POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/reinstallos
-
-.. code-block::
 
    {
        "os-reinstall": {
@@ -120,7 +122,7 @@ See :ref:`Responses (Task) <en-us_topic_0022067714>`.
 .. code-block::
 
    {
-       "job_id": "70a599e0-31e7-49b7-b260-868f441e862b"
+       "job_id": "ff80808288d41e1b018990260955686a"
    }
 
 Returned Values

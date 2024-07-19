@@ -8,7 +8,7 @@ Obtaining a Project ID
 Scenarios
 ---------
 
-A project ID is required for some URLs when an API is called. Therefore, you need to obtain a project ID in advance. Two methods are available:
+A project ID is required for some URLs when an API is called, so you need to obtain a project ID in advance. Two methods are available:
 
 -  :ref:`Obtain the Project ID by Calling an API <en-us_topic_0022670701__section922145141520>`
 -  :ref:`Obtain the Project ID from the Console <en-us_topic_0022670701__section784315312164>`

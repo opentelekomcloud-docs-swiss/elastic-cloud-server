@@ -9,4 +9,4 @@ Welcome to *Elastic Cloud Server API Reference*. An Elastic Cloud Server (ECS) i
 
 This document describes ECS application programming interfaces (APIs), including description, syntax, parameters, and examples. For details about all supported operations, see :ref:`API Overview <en-us_topic_0124306060>`.
 
-If you plan to access ECSs through an API, ensure that you are familiar with ECS concepts. For details, see "Service Overview" in *Elastic Cloud Server User Guide*.
+If you plan to access ECSs through an API, ensure that you are familiar with ECS concepts. For details, see "Service Overview" in the *Elastic Cloud Server User Guide*.

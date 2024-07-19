@@ -16,7 +16,7 @@ Token Authentication
 
 A token specifies temporary permissions in a computer system. During API authentication using a token, the token is added to requests to get permissions for calling the API. You can obtain a token by calling the `Obtaining User Token <https://docs.sc.otc.t-systems.com/api/iam/en-us_topic_0057845583.html>`__ API.
 
-ECS is a project-level service. When you call the API, set **auth.scope** in the request body to **project**.
+ECS is a project-level service. When you call this API, set **auth.scope** in the request body to **project**.
 
 .. code-block::
 
@@ -29,7 +29,7 @@ ECS is a project-level service. When you call the API, set **auth.scope** in the
                "password": {
                    "user": {
                        "name": "username",   //IAM user name
-                       "password": "********",  //IAM user password
+                       "password": "$ADMIN_PASS",  //IAM user password. You are advised to store it in ciphertext in the configuration file or an environment variable and decrypt it when needed to ensure security.
                        "domain": {
                            "name": "domainname"  //Name of the account to which the IAM user belongs
                        }

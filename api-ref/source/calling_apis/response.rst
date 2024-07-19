@@ -19,11 +19,15 @@ Response Header
 
 Similar to a request, a response also has a header, for example, **Content-Type**.
 
-:ref:`Figure 1 <en-us_topic_0170928125__en-us_topic_0170155703_fig4865141011511>` shows the response header fields for the API used to `obtain a user token <https://docs.sc.otc.t-systems.com/api/iam/en-us_topic_0057845583.html>`__. The **x-subject-token** header field is the desired user token. This token can then be used to authenticate the calling of other APIs.
+:ref:`Figure 1 <en-us_topic_0170928125__en-us_topic_0170155703_fig4865141011511>` shows the response header fields for the API used to `obtain a user token <https://docs.sc.otc.t-systems.com/api/iam/en-us_topic_0057845583.html>`__. The **X-Subject-Token** header field is the desired user token. This token can then be used to authenticate the calling of other APIs.
+
+.. note::
+
+   For security purposes, you are advised to set the token in ciphertext in configuration files or environment variables and decrypt it when using it.
 
 .. _en-us_topic_0170928125__en-us_topic_0170155703_fig4865141011511:
 
-.. figure:: /_static/images/en-us_image_0170178416.png
+.. figure:: /_static/images/en-us_image_0000001773129352.png
    :alt: **Figure 1** Header fields of the response to the request for obtaining a user token
 
    **Figure 1** Header fields of the response to the request for obtaining a user token
@@ -55,8 +59,8 @@ If an error occurs during API calling, an error code and a message will be displ
 ::
 
    {
-       "error_msg": "The format of message is error",
-       "error_code": "AS.0001"
+       "error_msg": "The request message format is invalid.",
+       "error_code": "IMG.0001"
    }
 
 In the response body, **error_code** is an error code, and **error_msg** provides information about the error.

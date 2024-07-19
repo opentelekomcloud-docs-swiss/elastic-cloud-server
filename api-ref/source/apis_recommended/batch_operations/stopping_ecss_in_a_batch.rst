@@ -10,6 +10,8 @@ Function
 
 This API is used to stop ECSs in a batch based on the specified ECS ID list. A maximum of 1,000 ECSs can be stopped in one minute.
 
+This API is an asynchronous API. After the batch stop request is successfully delivered, a job ID is returned. This does not mean the batch stop is complete. You need to call the API by referring to :ref:`Querying Task Execution Status <en-us_topic_0022225398>` to query the job status. The SUCCESS status indicates that the batch stop is successful.
+
 URI
 ---
 
@@ -74,13 +76,11 @@ See :ref:`Responses (Task) <en-us_topic_0022067714>`.
 Example Request
 ---------------
 
-In the request parameters, the request for stopping the ECS must be issued with field **os-stop**, as shown in the example request.
+Batch stop ECSs whose IDs are **616fb98f-46ca-475e-917e-2563e5a8cd19** and **726fb98f-46ca-475e-917e-2563e5a8cd20** with the request parameter set to **os-stop**.
 
 .. code-block:: text
 
    POST https://{endpoint}/v1/{project_id}/cloudservers/action
-
-.. code-block::
 
    {
        "os-stop": {

@@ -13,7 +13,7 @@ Concepts
 
    An IAM user is created by an account in IAM to use cloud services. Each IAM user has its own identity credentials (password and access keys).
 
-   API authentication requires information such as the account name, username, and password.
+   API authentication requires information such as the domain name, username, and password.
 
 -  Region
 

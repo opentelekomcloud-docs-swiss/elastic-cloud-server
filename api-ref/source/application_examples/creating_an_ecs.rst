@@ -41,7 +41,7 @@ Procedure
 
       -  Example request
 
-         GET: https://*{endpoint}*/v2.1/74610f3a5ad941998e91f076297ecf27/flavors/detail
+         GET https://*{endpoint}*/v2.1/74610f3a5ad941998e91f076297ecf27/flavors/detail
 
          Obtain *{endpoint}* from the administrator.
 
@@ -92,7 +92,7 @@ Procedure
 
       -  Example request
 
-         GET: https://*{endpoint}*/v2.1/74610f3a5ad941998e91f076297ecf27/images/detail
+         GET https://*{endpoint}*/v2.1/74610f3a5ad941998e91f076297ecf27/images/detail
 
          Obtain *{endpoint}* from the administrator.
 
@@ -161,7 +161,7 @@ Procedure
 
       -  Example request
 
-         GET: https://*{endpoint}*/v2.1/74610f3a5ad941998e91f076297ecf27/os-networks
+         GET https://*{endpoint}*/v2.1/74610f3a5ad941998e91f076297ecf27/os-networks
 
          Obtain *{endpoint}* from the administrator.
 
@@ -201,7 +201,7 @@ Procedure
 
       -  Example request
 
-         POST: https://*{endpoint}*/v2.1/74610f3a5ad941998e91f076297ecf27/os-keypairs
+         POST https://*{endpoint}*/v2.1/74610f3a5ad941998e91f076297ecf27/os-keypairs
 
          Obtain *{endpoint}* from the administrator.
 
@@ -223,11 +223,11 @@ Procedure
 
             {
               "keypair": {
-                "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCrR5Gcwlh5ih7JOvzIUuQxS5qzWWPMYHeDXkDKSQ9W5pumOV05SiO3WCswnaQ5xMdOl31mNiHtwlwq9dJi7X6jJBB2shTD+00G5WuwkBbFU4CLvt1B44u0NUiaTJ35NAvW2/4XvpXm9OwiQ3B5ge6ZY7Esi38Unh+pkbhPkYxNBCK8yoOlojQhWs75abdxZBi811/8RwLcNiFiocA2RGxtRjBdpEScj+1TU+OcfZdQnr0AFbO11z7yxfIygwwzVTgUuJNbMbKHStQqRbklfMlHY4RBPQgb7RN/YaXKTQSXT84k+D9xlDNo7Wj4fwOJTOz/s/PvbIOqjRHt9D6Y4IKd Generated-by-Nova\n",
-                "private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEogIBAAKCAQEAq0eRnMJYeYoeyTr8yFLkMUuas1ljzGB3g15AykkPVuabpjld\nOUojt1grMJ2kOcTHTpd9ZjYh7cJcKvXSYu1+oyQQdrIUw/tNBuVrsJAWxVOAi77d\nQeOLtDVImkyd+TQL1tv+F76V5vTsIkNweYHumWOxLIt/FJ4fqZG4T5GMTQQivMqD\npaI0IVrO+Wm3cWQYvNdf/EcC3DYhYqHANkRsbUYwXaREnI/tU1PjnH2XUJ69ABWz\ntdc+8sXyMoMMM1U4FLiTWzGyh0rUKkW5JXzJR2OEQT0IG+0Tf2Glyk0El0/OJPg/\ncZQzaO1o+H8DiUzs/7Pz72yDqo0R7fQ+mOCCnQIDAQABAoIBAA6/c9dGmK2mae4z\nyQ5KrOFdvC1TNhej+sZx+CwyzEJUSvSuHcvQCXFBAz8FY92hhvPKcX66jINXZ+4/\nCmWAQ5YyhcRiow0Y91HvsS0bywoknX3q6kxBFodmyyCWFkgd5iMTADb1Lx0a27Y7\njlS4Dl5gyiGmxUN2Ng24wWEAjE8ZNuI0lrtr5IZKp+s5IAi/rb5AG/mL7EzicE8c\nmGP+QAa+nzwhAwNhFwVID230xen/ZcoL1d77hxeARNqJUxoR25gwJd6Ebg2y9pDW\nVu6cbbzgdGUCfQYlMEoAamAkCswOsDpVDBXwQnt2A537n6Wq2bgYIKusHr9thtxP\n/5ubQLUCgYEA4zYuBG2vtLHnvce26P8o2j1xcJS9K0ozkah9JFl3hqFN0sAqLlz7\n/Fm1jA4kzHJS3d0UqP3AMDxY3HkIqCn4Be7lqeAAe2AfqkOZpt9MDNv4VwKe9sPb\nViW1qjL3FxziLC/YWTRNSlpwRjqJJGhA+UQt8rOia1k/zXmrEs7bXLcCgYEAwPsu\nK3j5QoAiziYVMYf5iCzWwAM9Ljpf9gw23lefTdIzhhfFtJplVRSyxRGU0UZ84GMI\nTd5zmcIF/1KUfhqmeiQzz6NIPEYEReahjpQ/sOH/Gk5Rwr3QwYPrwAu5x+kk/SRi\nKPkqw7APTR0sMQBcUq+ZYwGYLGPMdd1zUdLfb0sCgYBkuz11iydtxb3G/obSD2WO\nM9VaIycmzRPFzNwGRH/gOR0mhTluKp0wyJjbSd34oeqpH/2r2ivddrOysxoqa8jg\n4IQDZyLvj7MaKjQxrieqP89+y9Or9TMFo1xB46x2G8EN8/xHuA9YGnZSPFtWv72m\nhRqV0hv82amWsA0vHnRUSwKBgDsKHXvrTMbNkNhkykMXCH5iyWiBFSyZa1ZJMlgf\nknsqfdzeVPwF6E55QKAN2uuTlwzG/3ljPxahR1hvmUJjQN9JSBiUKbtW6GPCRVbr\nf/jLi1Iu99COZdluVKeybqn8Z/aSNP24DR9FM8kxzZ1IMPaTBmhFypp6BclhcLBt\nxTG1AoGAfcrkVbV1SOy7fECUtMpUECcw0yU4GWj3sR2RbII63C500RVYQlUpUaRR\naANbASHTVR4myOKtGSxEUhAQHlxFDwsDL7W3gzAqTFbEDp1xAAUyT/nkOAhQjEm4\nORFdDETeXLQG1KMUj+8AdnhfYp3JTdft6rmPpZEBUFiCAUMAvb0=\n-----END RSA PRIVATE KEY-----\n",
+                "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCrR5Gcwlh5ih7JOvzIUuQxS5qzWWPMYHeDXkDKSQ9W5pumOV05SiO3WCswnaQ5xMdOl31mNiHtwlwq9dJi7X6jJBB2shT******************************************************************************************************************************************************************************************************************************************************************************************************* Generated-by-Nova\n",
+                "private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEogIBAAKCAQEAq0eRnMJYeYoeyTr8yFLkMUuas1ljzGB3g15AykkPVuabpjld\nOUojt1grMJ2kOcTHTpd9ZjYh7cJcKvXSYu1+oyQQdrIUw/tNBuVrsJAWxVOAi77d\nQeOLtDVImkyd+TQL1tv+F76V5vTsIkNweYHumWOxLIt/FJ4fqZG4T5GMTQQivMqD\npaI0IVrO+Wm3cWQYvNdf/EcC3DYhYqHANkRsbUYwXaREnI/tU1PjnH2XUJ69ABWz\ntdc+8sXyMoMMM1U4FLiTWzGyh0rUKkW5JXzJR2OEQT0IG+0Tf2Glyk0El0/OJPg/\ncZQzaO1o+H8DiUzs/7Pz72yDqo0R7fQ+mOCCn***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n-----END RSA PRIVATE KEY-----\n",
                 "user_id": "f79791beca3c48159ac2553fff22e166",
                 "name": "demo1",
-                "fingerprint": "57:a7:a2:ed:5f:aa:e7:54:62:2e:bb:e7:92:22:cb:40"
+                "fingerprint": "57:a7:a2:ed:5f:aa:e7:**:**:**:**:**:**:**:**:**"
               }
             }
 
@@ -241,7 +241,7 @@ Procedure
 
       -  Example request
 
-         POST: https://*{endpoint}*/v2.1/74610f3a5ad941998e91f076297ecf27/os-keypairs
+         POST https://*{endpoint}*/v2.1/74610f3a5ad941998e91f076297ecf27/os-keypairs
 
          Obtain *{endpoint}* from the administrator.
 
@@ -251,7 +251,7 @@ Procedure
 
             {
                 "keypair": {
-                    "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDY8wMTdBYiJgi62o6eShoOlSKx3CZ3cE6PHisDblfK3Y0Bg7EHV7iV9c74pqsrIhK0xuGUuO1NxDQWbkwLTPN4F9Iy5CIYohLuMIpbln6LDtfRPpdhEh3lxL8MM61gyfpKzeKkwkEpSFj27Rgh6zCyJgBpkA2A0HTP737UlitahL4faCWDIS+Vj6mbcfkWiMhuMCzTZgSKAZ4PfoG4B5HJhR52C6A4XLiQFT9heh9gnIsIG+uTogTKUbcJKuN7M6AraJpul6eHhV9YI4433sDmuiBF/njvreVPWwAHlAkgT9I8q1T/cfEFiwzXpdGbkK5O8NC7K+qNbbdKihlahONt Generated-by-Nova\n",
+                    "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDY8wMTdBYiJgi62o6eShoOlSKx3CZ3cE6PHisDblfK3Y0Bg7EHV7iV9c74pqsrIhK0xuGUuO1NxDQWbkwLTPN4F9Iy5CI********************************************************************************************************************************************************************************************************************************************************* Generated-by-Nova\n",
                     "type": "ssh",
                     "name": "demo2",
                     "user_id": "fake"
@@ -264,10 +264,10 @@ Procedure
 
             {
               "keypair": {
-                "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDY8wMTdBYiJgi62o6eShoOlSKx3CZ3cE6PHisDblfK3Y0Bg7EHV7iV9c74pqsrIhK0xuGUuO1NxDQWbkwLTPN4F9Iy5CIYohLuMIpbln6LDtfRPpdhEh3lxL8MM61gyfpKzeKkwkEpSFj27Rgh6zCyJgBpkA2A0HTP737UlitahL4faCWDIS+Vj6mbcfkWiMhuMCzTZgSKAZ4PfoG4B5HJhR52C6A4XLiQFT9heh9gnIsIG+uTogTKUbcJKuN7M6AraJpul6eHhV9YI4433sDmuiBF/njvreVPWwAHlAkgT9I8q1T/cfEFiwzXpdGbkK5O8NC7K+qNbbdKihlahONt Generated-by-Nova\n",
+                "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDY8wMTdBYiJgi62o6eShoOlSKx3CZ3cE6PHisDblfK3Y0Bg7EHV7iV9c74pqsrIhK0xuGUuO1NxDQWbkwLTPN4F9Iy5CI********************************************************************************************************************************************************************************************************************************************************* Generated-by-Nova\n",
                 "user_id": "f79791beca3c48159ac2553fff22e166",
                 "name": "demo2",
-                "fingerprint": "dd:44:45:49:d9:f6:4f:c0:24:2d:81:aa:c4:4b:83:c2"
+                "fingerprint": "dd:44:45:49:d9:f6:4f:**:**:**:**:**:**:**:**:**"
               }
             }
 
@@ -292,7 +292,7 @@ Procedure
 
    -  Example request
 
-      POST: https://*{endpoint}*/v2.1/74610f3a5ad941998e91f076297ecf27/servers
+      POST https://*{endpoint}*/v2.1/74610f3a5ad941998e91f076297ecf27/servers
 
       Obtain *{endpoint}* from the administrator.
 
@@ -344,7 +344,7 @@ Procedure
                }
              ],
              "id": "6d311127-bce1-48db-bf0f-cac9f8f7f077",
-             "adminPass": "WcC4QoVZPXpV"
+             "adminPass": "**********"
            }
          }
 
@@ -360,7 +360,7 @@ Procedure
 
    -  Example request
 
-      GET: https://*{endpoint}*/v2.1/74610f3a5ad941998e91f076297ecf27/servers/0c71c0da-8852-4c56-a1d1-3a9b9bcb6da6
+      GET https://*{endpoint}*/v2.1/74610f3a5ad941998e91f076297ecf27/servers/0c71c0da-8852-4c56-a1d1-3a9b9bcb6da6
 
       where,
 

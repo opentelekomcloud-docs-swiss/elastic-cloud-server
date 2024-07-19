@@ -15,7 +15,6 @@ APIs (Recommended)
 -  :ref:`Tenant Quota Management <en-us_topic_0020212673>`
 -  :ref:`Task Status Management <en-us_topic_0022225397>`
 -  :ref:`Tag Management <en-us_topic_0108433461>`
--  :ref:`Password Management <en-us_topic_0112708161>`
 
 .. toctree::
    :maxdepth: 1
@@ -31,4 +30,3 @@ APIs (Recommended)
    tenant_quota_management/index
    task_status_management/index
    tag_management/index
-   password_management/index

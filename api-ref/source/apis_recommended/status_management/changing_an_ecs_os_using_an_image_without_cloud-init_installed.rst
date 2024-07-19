@@ -10,6 +10,8 @@ Function
 
 This API is used to change the OS of an ECS.
 
+This API is an asynchronous API. After the OS change request is successfully delivered, a job ID is returned. This does not mean the OS change is complete. You need to call the API by referring to :ref:`Querying Task Execution Status <en-us_topic_0022225398>` to query the job status. The SUCCESS status indicates that the OS change is successful.
+
 After this API is called, the system uninstalls the system disk, uses the new image to create a system disk, and attaches it to the ECS. In this way, the OS is changed.
 
 This API supports the images without Cloud-Init or Cloudbase-Init installed. Otherwise, use the API described in :ref:`Changing an ECS OS (Using an Image with Cloud-Init Installed) <en-us_topic_0067876971>`.
@@ -103,11 +105,11 @@ For details, see :ref:`Responses (Task) <en-us_topic_0022067714>`.
 Example Request
 ---------------
 
+Change the OS and use the key pair for login authentication after the OS change.
+
 .. code-block:: text
 
    POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/changeos
-
-.. code-block::
 
    {
        "os-change": {
@@ -126,7 +128,7 @@ See :ref:`Responses (Task) <en-us_topic_0022067714>`.
 .. code-block::
 
    {
-       "job_id": "70a599e0-31e7-49b7-b260-868f441e862b"
+       "job_id": "ff80808288d41e1b018990260955686a"
    }
 
 Returned Values

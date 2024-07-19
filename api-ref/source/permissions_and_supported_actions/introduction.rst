@@ -5,13 +5,13 @@
 Introduction
 ============
 
-You can use Identity and Access Management (IAM) for fine-grained permissions management of your ECS. If your account does not need individual IAM users, you can skip this section.
+You can use Identity and Access Management (IAM) for fine-grained permissions management of your ECSs. If your account does not need individual IAM users, you can skip this section.
 
 New IAM users do not have any permissions assigned by default. You need to first add them to one or more groups and attach policies or roles to these groups. The users then inherit permissions from the groups and can perform specified operations on cloud services based on the permissions they have been assigned.
 
 You can grant users permissions by using roles and policies. Roles are provided by IAM to define service-based permissions that match users' job responsibilities. Policies define API-based permissions for operations on specific resources under certain conditions, allowing for more fine-grained, secure access control of cloud resources.
 
-For more information about system policies supported by ECS, see "Permissions Management" in *Elastic Cloud Server User Guide*.
+For more information about system-defined policies supported by ECS, see "Permissions Management" in the *Elastic Cloud Server User Guide*.
 
 .. note::
 
