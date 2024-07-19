@@ -10,6 +10,8 @@ Function
 
 ECS specifications can be modified, for example, upgrading the vCPUs and memory, to meet service requirements. This API is used to modify ECS specifications.
 
+This API is an asynchronous API. After the specifications modification request is successfully delivered, a job ID is returned. This does not mean the modification is complete. You need to call the API by referring to :ref:`Querying Task Execution Status <en-us_topic_0022225398>` to query the job status. The SUCCESS status indicates that the modification is successful.
+
 URI
 ---
 
@@ -77,11 +79,11 @@ See :ref:`Responses (Task) <en-us_topic_0022067714>`.
 Example Request
 ---------------
 
+Change the ECS flavor to c3.15xlarge.2.
+
 .. code-block:: text
 
    POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/resize
-
-.. code-block::
 
    {
    "resize": {
@@ -95,7 +97,7 @@ Example Response
 .. code-block::
 
    {
-       "job_id": "70a599e0-31e7-49b7-b260-868f441e862b"
+       "job_id": "ff80808288d41e1b018990260955686a"
    }
 
 Returned Values

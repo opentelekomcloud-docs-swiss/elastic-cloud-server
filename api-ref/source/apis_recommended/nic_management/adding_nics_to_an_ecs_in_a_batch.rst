@@ -10,6 +10,8 @@ Function
 
 This API is used to add one or multiple NICs to an ECS.
 
+This API is an asynchronous API. After the NIC addition request is successfully delivered, a job ID is returned. This does not mean the NIC addition is complete. You need to call the API by referring to :ref:`Querying Task Execution Status <en-us_topic_0022225398>` to query the job status. The SUCCESS status indicates that the NIC addition is successful.
+
 URI
 ---
 
@@ -80,11 +82,11 @@ See :ref:`Responses (Task) <en-us_topic_0022067714>`.
 Example Request
 ---------------
 
+Add the NIC whose ID is **d32019d3-bc6e-4319-9c1d-6722fc136a23** and security group ID is **f0ac4394-7e4a-4409-9701-ba8be283dbc3** to an ECS.
+
 .. code-block:: text
 
    POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/nics
-
-.. code-block::
 
    {
        "nics": [
@@ -105,7 +107,7 @@ Example Response
 .. code-block::
 
    {
-       "job_id": "70a599e0-31e7-49b7-b260-868f441e862b"
+       "job_id": "ff80808288d41e1b018990260955686a"
    }
 
 Returned Values

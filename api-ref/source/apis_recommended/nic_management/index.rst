@@ -9,6 +9,7 @@ NIC Management
 -  :ref:`Deleting NICs from an ECS in a Batch <en-us_topic_0020212665>`
 -  :ref:`Binding a Virtual IP Address to an ECS NIC <en-us_topic_0077845908>`
 -  :ref:`Unbinding a Virtual IP Address from an ECS NIC <en-us_topic_0077846077>`
+-  :ref:`Querying NICs of an ECS <en-us_topic_0121978383>`
 
 .. toctree::
    :maxdepth: 1
@@ -18,3 +19,4 @@ NIC Management
    deleting_nics_from_an_ecs_in_a_batch
    binding_a_virtual_ip_address_to_an_ecs_nic
    unbinding_a_virtual_ip_address_from_an_ecs_nic
+   querying_nics_of_an_ecs

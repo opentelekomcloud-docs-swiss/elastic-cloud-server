@@ -75,11 +75,11 @@ Response
 Example Request
 ---------------
 
+Updated the metadata of an ECS with the user-defined metadata key-value pair.
+
 .. code-block:: text
 
    POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/metadata
-
-.. code-block::
 
    {
        "metadata": {

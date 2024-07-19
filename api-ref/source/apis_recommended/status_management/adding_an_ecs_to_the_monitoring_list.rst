@@ -10,7 +10,7 @@ Function
 
 This API is used to add an ECS to the monitoring list.
 
-Ceilometer periodically collects monitoring data on the ECSs added to the monitoring list and reports the data to Cloud Eye. The data includes the platform version, CPU, memory, NICs, disks, and hardware version. For example, the plug-in of an SAP ECS periodically obtains monitoring data from Cloud Eye and reports the data to SAP in reports.
+Ceilometer periodically collects monitoring data on the ECSs added to the monitoring list and reports the data to Cloud Eye. The data includes the platform version, CPU, memory, NICs, disks, and hardware version.
 
 URI
 ---
@@ -52,11 +52,11 @@ None
 Example Request
 ---------------
 
+Add a specified ECS to the monitoring list.
+
 .. code-block:: text
 
    POST https://{endpoint}/v1.0/servers/{server_id}/action
-
-.. code-block::
 
    {
       "monitorMetrics" : null

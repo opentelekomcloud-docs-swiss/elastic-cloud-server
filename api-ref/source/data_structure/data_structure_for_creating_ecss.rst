@@ -327,16 +327,16 @@ This field is used by the following APIs:
 
 .. table:: **Table 11** **binding:profile** field description
 
-   +-------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+
-   | Parameter               | Mandatory       | Type            | Description                                                                 |
-   +=========================+=================+=================+=============================================================================+
-   | disable_security_groups | No              | Boolean         | Indicates that a HANA ECS NIC is not added to a security group.             |
-   |                         |                 |                 |                                                                             |
-   |                         |                 |                 | .. note::                                                                   |
-   |                         |                 |                 |                                                                             |
-   |                         |                 |                 |    -  A primary HANA ECS NIC must be added to a security group.             |
-   |                         |                 |                 |    -  At most one HANA ECS NIC is allowed not to add to any security group. |
-   +-------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+
+   +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+
+   | Parameter               | Mandatory       | Type            | Description                                                                              |
+   +=========================+=================+=================+==========================================================================================+
+   | disable_security_groups | No              | Boolean         | Specifies whether the NIC of an ECS for HANA is not added to a security group.           |
+   |                         |                 |                 |                                                                                          |
+   |                         |                 |                 | .. note::                                                                                |
+   |                         |                 |                 |                                                                                          |
+   |                         |                 |                 |    -  The primary NIC of the ECS for HANA must be added to a security group.             |
+   |                         |                 |                 |    -  At most one NIC of the HANA ECS is allowed not to be added to any security groups. |
+   +-------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+
 
 .. _en-us_topic_0167957246__section12781010134512:
 

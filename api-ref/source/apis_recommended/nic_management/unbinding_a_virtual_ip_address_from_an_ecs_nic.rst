@@ -84,11 +84,11 @@ Response
 Example Request
 ---------------
 
+Unbind a virtual IP address from an ECS NIC.
+
 .. code-block:: text
 
    PUT https://{endpoint}/v1/{project_id}/cloudservers/nics/{nic_id}
-
-.. code-block::
 
    {
        "nic": {

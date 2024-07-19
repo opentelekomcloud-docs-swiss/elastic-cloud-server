@@ -10,6 +10,8 @@ Function
 
 This API is used to attach a disk to an ECS.
 
+This API is an asynchronous API. After the attachment request is successfully delivered, a job ID is returned. This does not mean the attachment is complete. You need to call the API by referring to :ref:`Querying Task Execution Status <en-us_topic_0022225398>` to query the job status. The SUCCESS status indicates that the attachment is successful.
+
 URI
 ---
 
@@ -65,6 +67,7 @@ Request
    |                 |                 |                 |    -  The new disk device name cannot be the same as an existing one.                                                                                                                                                                                                                                                                                                                                                                                    |
    |                 |                 |                 |    -  This parameter is mandatory for Xen ECSs. Set the parameter value to **/dev/sda** for the system disks of such ECSs and to **/dev/sd**\ *x* for data disks, where *x* is a letter in alphabetical order. For example, if there are two data disks, set the device names of the two data disks to **/dev/sdb** and **/dev/sdc**, respectively. If you set a device name starting with **/dev/vd**, the system uses **/dev/sd** by default.          |
    |                 |                 |                 |    -  For KVM ECSs, set the parameter value to **/dev/vda** for system disks. The device names for data disks of KVM ECSs are optional. If the device names of data disks are required, set them in alphabetical order. For example, if there are two data disks, set the device names of the two data disks to **/dev/vdb** and **/dev/vdc**, respectively. If you set a device name starting with **/dev/sd**, the system uses **/dev/vd** by default. |
+   |                 |                 |                 |    -  For ECSs that only support SCSI disks, set the device name of the system disk to **/dev/sda** and the device names of data disks in alphabetical order, for example, **/dev/sdb** and **/dev/sdc**. The system will not change the default device names.                                                                                                                                                                                           |
    +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | volume_type     | No              | String          | Specifies the disk type.                                                                                                                                                                                                                                                                                                                                                                                                                                 |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -88,11 +91,11 @@ See :ref:`Responses (Task) <en-us_topic_0022067714>`.
 Example Request
 ---------------
 
+Attach a SCSI EVS disk to the device **/dev/sda**.
+
 .. code-block:: text
 
    POST https://{endpoint}/v1/{project_id}/cloudservers/{server_id}/attachvolume
-
-.. code-block::
 
    {
        "volumeAttachment": {
@@ -111,7 +114,7 @@ Example Response
 .. code-block::
 
    {
-       "job_id": "70a599e0-31e7-49b7-b260-868f441e862b"
+       "job_id": "ff80808288d41e1b018990260955686a"
    }
 
 Returned Values
