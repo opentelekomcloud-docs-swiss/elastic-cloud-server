@@ -9,14 +9,14 @@ Elastic Cloud Server - User Guide
    getting_started/index
    instances/index
    images/index
-   evs_disks/index
-   backup_using_cbr/index
-   nics/index
+   disks/index
+   elastic_network_interfaces/index
    eips/index
    security/index
+   backup_using_cbr/index
    passwords_and_key_pairs/index
    resources_and_tags/index
-   monitoring/index
+   monitoring_using_cloud_eye/index
    troubleshooting/index
    faqs/index
    change_history

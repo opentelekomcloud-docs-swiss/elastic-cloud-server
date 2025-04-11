@@ -10,22 +10,22 @@ Scenarios
 
 A tag identifies an ECS. Adding tags to an ECS facilitates ECS identification and management.
 
-You can add a tag to an ECS during the ECS creation or after the ECS creation (**Tags** tab on the page providing details about the ECS). Up to 10 tags can be added to an ECS.
+You can add tags to an ECS either during or after the ECS creation. A maximum of 10 tags can be added to an ECS.
 
 .. note::
 
-   Tags added during ECS creation will also be added to the created EIP and EVS disks (including the system disk and data disks) of the ECS. If the ECS uses an existing EIP, the tags will not be added to the EIP.
+   Tags added during the ECS creation will also be added to the EIP and EVS disks (including the system disk and data disks) of the ECS. If the ECS uses an existing EIP, the tags will not be added to the EIP.
 
    After creating the ECS, you can view the tags on the pages providing details about the ECS, EIP, and EVS disks.
 
 Basics of Tags
 --------------
 
-Tags are used to identify cloud resources. When you have many cloud resources of the same type, you can use tags to classify cloud resources by dimension (for example, use, owner, or environment).
+Tags are used to identify cloud resources. When you have many cloud resources of the same type, you can use tags to classify cloud resources by dimension (for example, usage, owner, or environment).
 
 .. _en-us_topic_0092499768__en-us_topic_0157874334_fig81911042564:
 
-.. figure:: /_static/images/en-us_image_0000001397546242.png
+.. figure:: /_static/images/en-us_image_0000001761368056.png
    :alt: **Figure 1** Example tags
 
    **Figure 1** Example tags
@@ -39,7 +39,7 @@ Tag Naming Rules
 
 -  Each tag consists of a key-value pair.
 
--  Each ECS supports adding up to 10 tags.
+-  A maximum of 10 tags can be added to an ECS.
 
 -  For each resource, a tag key must be unique and can have only one tag value.
 

@@ -32,7 +32,7 @@ Procedure
 
    -  Selecting a file
 
-      a. In the **Import Key Pair** dialog box of the management console, click **Select File** and select the locally stored public key file (for example, the .txt file saved in :ref:`3 <en-us_topic_0000001234335274__li18403111116343>` in :ref:`Creating a Key Pair Using PuTTYgen <en-us_topic_0000001234335274>`).
+      a. In the **Import Key Pair** dialog box of the management console, click **Select File** and select the locally stored public key file (for example, the .txt file saved in :ref:`3 <en-us_topic_0000001234335274__li18403111116343>` in :ref:`Creating a Key Pair Using PuTTY Key Generator <en-us_topic_0000001234335274>`).
 
          .. note::
 

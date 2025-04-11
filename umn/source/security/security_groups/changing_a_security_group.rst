@@ -8,7 +8,13 @@ Changing a Security Group
 Scenarios
 ---------
 
-To change the security group of an ECS NIC, perform the operations described in this section.
+To change the security group associated with an ECS network interface, perform the operations described in this section.
+
+Constraints
+-----------
+
+-  Changing the security group will overwrite the original security group settings.
+-  Using multiple security groups may deteriorate ECS network performance. You are advised to select no more than five security groups.
 
 Procedure
 ---------
@@ -19,7 +25,7 @@ Procedure
 
 #. Under **Computing**, click **Elastic Cloud Server**.
 
-#. In the ECS list, locate the row that contains the target ECS. Click **More** in the **Operation** column and select **Manage Network** > **Change Security Group**.
+#. In the ECS list, choose **More** > **Manage Network** > **Change Security Group** in the **Operation** column.
 
    The **Change Security Group** dialog box is displayed.
 
@@ -31,7 +37,7 @@ Procedure
 
 #. Select the target NIC and security groups.
 
-   You can select multiple security groups. In such a case, the rules of all the selected security groups will be aggregated to apply on the ECS.
+   You can select multiple security groups. In such a case, the rules of all the selected security groups will apply to the ECS.
 
    To create a security group, click **Create Security Group**.
 

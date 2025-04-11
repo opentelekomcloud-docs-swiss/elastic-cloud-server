@@ -5,34 +5,42 @@
 FAQs
 ====
 
--  :ref:`ECS Overview <en-us_topic_0030930805>`
--  :ref:`Creation and Deletion <en-us_topic_0018073208>`
--  :ref:`Login and Connection <en-us_topic_0030930807>`
--  :ref:`ECS Management <en-us_topic_0208808104>`
--  :ref:`OS Management <en-us_topic_0018124788>`
+-  :ref:`Product Consulting <en-us_topic_0030930805>`
+-  :ref:`ECS Creation <en-us_topic_0208785174>`
+-  :ref:`ECS Deletion and Unsubscription <en-us_topic_0208785175>`
+-  :ref:`Remote Login <en-us_topic_0030930807>`
+-  :ref:`Region and AZ <en-us_topic_0018196896>`
+-  :ref:`OS <en-us_topic_0155136013>`
+-  :ref:`Disk Partition, Attachment, and Expansion <en-us_topic_0018124786>`
+-  :ref:`Network Configuration <en-us_topic_0018124785>`
+-  :ref:`EIP <en-us_topic_0030930806>`
+-  :ref:`Password and Key Pair <en-us_topic_0105215483>`
+-  :ref:`Application Deployment and Software Installation <en-us_topic_0018124789>`
 -  :ref:`File Upload/Data Transfer <en-us_topic_0170135967>`
--  :ref:`ECS Migration <en-us_topic_0208809314>`
--  :ref:`Disk Management <en-us_topic_0018124786>`
--  :ref:`Passwords and Key Pairs <en-us_topic_0105215483>`
--  :ref:`Network Configurations <en-us_topic_0018124785>`
--  :ref:`Resource Management and Tags <en-us_topic_0208809315>`
--  :ref:`Resource Monitoring <en-us_topic_0208809316>`
--  :ref:`Database Applications <en-us_topic_0018124789>`
+-  :ref:`ECS Failure <en-us_topic_0208808107>`
+-  :ref:`Slow ECS Response <en-us_topic_0208809316>`
+-  :ref:`Specification Modification <en-us_topic_0208808106>`
+-  :ref:`OS Change <en-us_topic_0018124788>`
+-  :ref:`Resource Management and Tag <en-us_topic_0208809315>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   ecs_overview/index
-   creation_and_deletion/index
-   login_and_connection/index
-   ecs_management/index
-   os_management/index
+   product_consulting/index
+   ecs_creation/index
+   ecs_deletion_and_unsubscription/index
+   remote_login/index
+   region_and_az/index
+   os/index
+   disk_partition_attachment_and_expansion/index
+   network_configuration/index
+   eip/index
+   password_and_key_pair/index
+   application_deployment_and_software_installation/index
    file_upload_data_transfer/index
-   ecs_migration/index
-   disk_management/index
-   passwords_and_key_pairs/index
-   network_configurations/index
-   resource_management_and_tags/index
-   resource_monitoring/index
-   database_applications/index
+   ecs_failure/index
+   slow_ecs_response/index
+   specification_modification/index
+   os_change/index
+   resource_management_and_tag/index

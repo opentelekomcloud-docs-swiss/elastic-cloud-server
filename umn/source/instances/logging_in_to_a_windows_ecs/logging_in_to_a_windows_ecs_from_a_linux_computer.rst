@@ -14,9 +14,9 @@ Prerequisites
 -------------
 
 -  The target ECS is running.
--  You have bound an EIP to the ECS.
+-  The ECS must have an EIP bound.
 
--  Access to port 3389 is allowed in the inbound direction of the security group to which the ECS belongs.
+-  Access to port 3389 is allowed in the inbound direction of the security group which the ECS belongs to.
 -  Data can be exchanged between the login tool and the target ECS. For example, the default port 3389 is not blocked by the firewall.
 -  RDP has been enabled on the target ECS. By default, RDP has been enabled on the ECSs created using a public image. For instructions about how to enable RDP, see :ref:`Enabling RDP <en-us_topic_0275383051__section65216898112059>`.
 
@@ -66,7 +66,7 @@ For your first login, use VNC to log in and enable RDP for your ECS. Then, use M
 
 #. Log in to the Windows ECS using VNC.
 
-   For details, see :ref:`Login Using VNC <en-us_topic_0027268511>`.
+   For details, see :ref:`Logging In to a Windows ECS Using VNC <en-us_topic_0027268511>`.
 
 #. Click **Start** in the task bar and choose **Control Panel** > **System and Security** > **System** > **Remote settings**.
 

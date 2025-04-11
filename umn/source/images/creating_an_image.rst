@@ -20,14 +20,47 @@ Procedure
 ---------
 
 #. Log in to the management console.
-#. Click |image1| in the upper left corner and select your region and project.
-#. Under **Computing**, click **Elastic Cloud Server**.
-#. Locate the row that contains the target ECS and choose **More** > **Manage Image/Disk/Backup** > **Create Image** in the **Operation** column.
-#. Configure image information.
 
-   -  **Source**: **ECS**
-   -  **ECS**: Retain default settings.
-   -  **Name**: Customize your image name.
+#. Click |image1| in the upper left corner and select your region and project.
+
+#. Under **Computing**, click **Elastic Cloud Server**.
+
+#. In the ECS list, choose **More** > **Manage Image/Disk/Backup** > **Create Image** in the **Operation** column.
+
+#. Configure the following information:
+
+   :ref:`Table 1 <en-us_topic_0101604508__en-us_topic_0030713149_table050019474117>` and :ref:`Table 2 <en-us_topic_0101604508__en-us_topic_0030713149_table6978715749>` list the parameters in the **Image Type and Source** and **Image Information** areas, respectively.
+
+   .. _en-us_topic_0101604508__en-us_topic_0030713149_table050019474117:
+
+   .. table:: **Table 1** Image type and source
+
+      +------------+-----------------------------------------------------------------------+
+      | Parameter  | Description                                                           |
+      +============+=======================================================================+
+      | Image Type | Select **System disk image**.                                         |
+      +------------+-----------------------------------------------------------------------+
+      | Source     | Click the **ECS** tab and select an ECS with required configurations. |
+      +------------+-----------------------------------------------------------------------+
+
+   .. _en-us_topic_0101604508__en-us_topic_0030713149_table6978715749:
+
+   .. table:: **Table 2** Image information
+
+      +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+      | Parameter                         | Description                                                                                                              |
+      +===================================+==========================================================================================================================+
+      | Encryption                        | This parameter specifies whether the image will be encrypted. The value is provided by the system and cannot be changed. |
+      |                                   |                                                                                                                          |
+      |                                   | -  Only an unencrypted private image can be created from an unencrypted ECS.                                             |
+      |                                   | -  Only an encrypted private image can be created from an encrypted ECS.                                                 |
+      +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+      | Name                              | Set a name for the image.                                                                                                |
+      +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+      | Tag                               | (Optional) Set a tag key and a tag value for the image to make identification and management of your images easier.      |
+      +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+      | Description                       | (Optional) Enter a description of the image.                                                                             |
+      +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------+
 
 #. Click **Create Now**.
 

@@ -12,12 +12,14 @@ Virtual Private Cloud (VPC) allows you to create customized virtual networks in 
 
 For more information about VPC, see *Virtual Private Cloud User Guide*.
 
-Subnet
-------
+Subnets
+-------
 
 A subnet is a range of IP addresses in your VPC and provides IP address management and DNS resolution functions for ECSs in it. The IP addresses of all ECSs in a subnet belong to the subnet.
 
 By default, ECSs in all subnets of the same VPC can communicate with each other, while ECSs in different VPCs cannot.
+
+.. _en-us_topic_0030828257__section15617142420109:
 
 Security Group
 --------------
@@ -32,7 +34,7 @@ Your account automatically comes with a default security group. The default secu
 
    **Figure 1** Default security group
 
-:ref:`Table 1 <en-us_topic_0030828257__table1580115155277>` describes default security group rules.
+:ref:`Table 1 <en-us_topic_0030828257__table1580115155277>` describes the rules in the default security group.
 
 .. _en-us_topic_0030828257__table1580115155277:
 
@@ -49,7 +51,7 @@ Your account automatically comes with a default security group. The default secu
 EIP
 ---
 
-The Elastic IP (EIP) service enables your cloud resources to communicate with the Internet using static public IP addresses and scalable bandwidths. EIPs can be bound to or unbound from ECSs, BMSs, virtual IP addresses, NAT gateways, or load balancers.
+The Elastic IP (EIP) service enables your cloud resources to communicate with the Internet using static public IP addresses and scalable bandwidths. EIPs can be bound to or unbound from ECSs, BMSs, virtual IP addresses, NAT gateways or load balancers.
 
 Each EIP can be used by only one cloud resource at a time.
 
@@ -66,14 +68,14 @@ Network QoS uses basic technologies to improve the quality of network communicat
 
 The intranet bandwidth and PPS of an ECS are determined by its flavor.
 
--  Assured intranet bandwidth: indicates the guaranteed bandwidth allocated to an ECS
--  Maximum intranet bandwidth: indicates the maximum bandwidth that can be allocated to an ECS
+-  Assured intranet bandwidth: indicates the guaranteed bandwidth allocated to an ECS.
+-  Maximum intranet bandwidth: indicates the maximum bandwidth that can be allocated to an ECS.
 -  Maximum intranet PPS: indicates the maximum ECS capability in transmitting and receiving packets.
 -  NIC multi-queue: allocates NIC interrupt requests to multiple vCPUs for higher PPS performance and bandwidth.
 
    .. note::
 
-      -  For instructions about how to test PPS, see :ref:`How Can I Test Network Performance? <en-us_topic_0115820205>`
+      -  For instructions about how to test PPS, see :ref:`How Can I Test the Network Performance of Linux ECSs? <en-us_topic_0115820205>`
       -  For instructions about how to enable NIC multi-queue, see :ref:`Enabling NIC Multi-Queue <en-us_topic_0058758453>`.
 
 **Use case of network QoS:**
@@ -90,12 +92,12 @@ Network QoS:
 
 -  The maximum/assured bandwidth is completely independent of the EIP bandwidth.
 -  ECSs of the same hypervisor share the total bandwidth of the hypervisor.
--  Network QoS applies for both internal and external bandwidth.
+-  Network QoS applies for both private and public network bandwidth.
 -  Network QoS has been applied to the existing KVM-based ECSs.
 -  ECSs of the same hypervisor are preferentially allocated with assured bandwidths. Only when other ECSs of the same hypervisor are not in use, an ECS in use in the hypervisor can have the maximum bandwidth.
 
 .. note::
 
    -  Network QoS applies to any program running on an ECS.
-   -  Network QoS applies for both internal and external bandwidth.
+   -  Network QoS applies for both private and public network bandwidth.
    -  The EIP bandwidth limits the external bandwidth, and the network QoS limits the internal bandwidth.

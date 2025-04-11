@@ -8,9 +8,14 @@ Obtaining the Password for Logging In to a Windows ECS
 Scenarios
 ---------
 
-Password authentication is required to log in to a Windows ECS. Therefore, you must use the key file used when you created the ECS to obtain the administrator password generated during ECS creation. The administrator user is **Administrator** or the user configured using Cloudbase-Init. This password is randomly generated, offering high security.
+Password authentication is required to log in to a Windows ECS. You must use the key file used when you created the ECS to obtain the administrator password generated during ECS creation. The administrator user is **Administrator** or the user configured using Cloudbase-Init. This password is randomly generated, offering high security.
 
 You can obtain the initial password for logging in to a Windows ECS through the management console or APIs. For details, see this section.
+
+Prerequisites
+-------------
+
+You have obtained the private key file (.pem file) which was generated during the ECS creation.
 
 Obtaining the Password Through the Management Console
 -----------------------------------------------------
@@ -35,17 +40,17 @@ Obtaining the Password Through APIs
 
 #. Set up the API calling environment.
 
-#. Call APIs. For details, see "Before You Start" in *Elastic Cloud Server API Reference*.
+#. Call APIs. For details, see "Before You Start" in the *Elastic Cloud Server API Reference*.
 
 #. .. _en-us_topic_0031107266__li5770130102852:
 
    Obtain the ciphertext password.
 
-   Call the password obtaining APIs to obtain the ciphertext password of the public key encrypted using RSA. The API URI is in the format "GET /v2/{*tenant_id*}/servers/{*server_id*}/os-server-password".
+   Call the password obtaining APIs to obtain the ciphertext password of the public key encrypted using RSA. The API URI is in the format "GET /v2/{*project_id*}/servers/{*server_id*}/os-server-password".
 
    .. note::
 
-      For details, see "Obtaining the Password for Logging In to an ECS" in the *ECS API Reference*.
+      For details, see "Obtaining the Password for Logging In to an ECS" in the *Elastic Cloud Server API Reference*.
 
 #. Decrypt the ciphertext password.
 

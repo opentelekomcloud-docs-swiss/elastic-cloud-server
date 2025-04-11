@@ -5,8 +5,8 @@
 Step 2: Configure Network
 =========================
 
-Network Configurations
-----------------------
+Network Settings
+----------------
 
 #. Set **Network** by selecting an available VPC and subnet from the drop-down list and specifying a private IP address assignment mode.
 
@@ -18,10 +18,10 @@ Network Configurations
 
    .. note::
 
-      -  Ensure that DHCP is enabled in the VPC to which the ECS belongs.
+      -  Ensure that DHCP is enabled in the VPC which the ECS belongs to.
       -  When you use VPC for the first time, the system automatically creates a VPC for you, including the security group and NIC.
 
-#. (Optional) Add an extension NIC. You can add multiple extension NICs to an ECS and specify IP addresses for them (including primary NICs).
+#. (Optional) Set **Extension NIC**. You can add multiple extension NICs to an ECS and specify IP addresses for them (including primary NICs).
 
    .. note::
 
@@ -41,25 +41,25 @@ Network Configurations
 
       Before initializing an ECS, ensure that the security group rules for the outbound direction meet the following requirements:
 
-      -  **Protocol**: **TCP**
-      -  **Port Range**: **80**
-      -  **Remote End**: **169.254.0.0/16**
+      -  Protocol & Port: TCP
+      -  Port: 80
+      -  Destination: 169.254.0.0/16
 
       If you use the default security group rules for the outbound direction, the preceding requirements are met, and the ECS can be initialized. The default security group rules for the outbound direction are as follows:
 
-      -  **Protocol**: **ANY**
-      -  **Port Range**: **ANY**
-      -  **Remote End**: **0.0.0.0/16**
+      -  Protocol & Port: All
+      -  Port range: All ports
+      -  Destination: 0.0.0.0/0
 
-#. Set EIP.
+#. Set **EIP**.
 
-   An EIP is a static public IP address bound to an ECS in a VPC. Using the EIP, the ECS provides services externally.
+   An EIP is a static public IP address bound to an ECS in a VPC. Using the EIP, the ECS can provide services externally.
 
    The following options are provided:
 
    -  Auto assign
 
-      The system automatically assigns an EIP for the ECS. The EIP provides a dedicated bandwidth that is configurable.
+      The system automatically assigns an EIP with exclusive bandwidth for each ECS. You can set the bandwidth.
 
    -  Specify
 
