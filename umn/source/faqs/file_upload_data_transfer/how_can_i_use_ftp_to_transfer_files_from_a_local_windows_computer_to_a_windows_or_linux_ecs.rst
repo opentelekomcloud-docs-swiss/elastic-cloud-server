@@ -13,7 +13,7 @@ You want to use FTP to transfer files from a local Windows computer to an ECS.
 Prerequisites
 -------------
 
--  An EIP has been bound to the ECS and access to port 21 is allowed in the inbound direction of the security group to which the ECS belongs.
+-  An EIP has been bound to the ECS and access to TCP port 21 is allowed in the inbound direction of the security group to which the ECS belongs.
 -  You have enabled FTP on the target ECS. If you have not enabled FTP, check the following links to know how to set up an FTP site:
 
 Procedure
@@ -23,7 +23,7 @@ Procedure
 
 #. On the local Windows computer, open FileZilla, enter the information about the target ECS, and click **Quickconnect**.
 
-   -  **Host**: EIP bound to the ECS
+   -  **Host**: EIP bound to an ECS
    -  **Username**: username set when the FTP site was set up
    -  **Password**: password of the username
    -  **Port**: FTP access port, which is port 21 by default

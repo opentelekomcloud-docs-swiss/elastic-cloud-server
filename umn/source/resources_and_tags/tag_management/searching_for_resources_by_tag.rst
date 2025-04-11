@@ -16,7 +16,7 @@ On the **Elastic Cloud Server** page, search for ECSs by tag key or value.
 
 #. Click |image1| in the upper left corner and select your region and project.
 
-#. Under **Computing**, click **Elastic Cloud Server**.
+#. Under **Computing**, choose **Elastic Cloud Server**.
 
 #. Click **Search by Tag** above the upper right corner of the ECS list to expand the search area.
 
@@ -26,7 +26,7 @@ On the **Elastic Cloud Server** page, search for ECSs by tag key or value.
 
       **Figure 1** Searching for ECSs by tag
 
-#. Enter the tag of the ECS to be searched for.
+#. Enter the tag of the ECS to be queried.
 
    Neither the tag key nor value can be empty. When the tag key or value is matched, the system automatically shows the target ECSs.
 

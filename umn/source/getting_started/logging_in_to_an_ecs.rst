@@ -26,11 +26,11 @@ You can log in to a Windows ECS using either VNC or MSTSC provided on the manage
 
    -  Management console (VNC)
 
-      For details, see :ref:`Login Using VNC <en-us_topic_0027268511>`.
+      For details, see :ref:`Logging In to a Windows ECS Using VNC <en-us_topic_0027268511>`.
 
    -  Remote desktop connection (MSTSC)
 
-      For details, see :ref:`Login Using MSTSC <en-us_topic_0017955381>`.
+      For details, see :ref:`Logging In to a Windows ECS Using MSTSC <en-us_topic_0017955381>`.
 
 Logging In to a Linux ECS
 -------------------------
@@ -43,17 +43,17 @@ You can log in to a Linux ECS using either VNC or SSH key provided on the manage
 
    **Figure 2** Linux ECS login modes
 
-#. Select a login method and log in to the ECS.
+Select a login method and log in to the ECS.
 
-   -  VNC
+-  VNC
 
-      For details, see :ref:`Login Using VNC <en-us_topic_0093263550>`.
+   For details, see :ref:`Logging In to a Linux ECS Using VNC <en-us_topic_0093263550>`.
 
-   -  SSH key
+-  SSH key
 
-      When you log in to the ECS using the SSH key, bind an EIP to the ECS.
+   When you log in to the ECS using the SSH key, bind an EIP to the ECS.
 
-      For details, see :ref:`Login Using an SSH Key <en-us_topic_0017955380>`.
+   For details, see :ref:`Logging In to a Linux ECS Using an SSH Key Pair <en-us_topic_0017955380>`.
 
 Follow-up Procedure
 -------------------
@@ -62,4 +62,4 @@ Follow-up Procedure
 
    For details, see :ref:`Scenarios and Disk Partitions <en-us_topic_0030831623>`.
 
--  Certain ECSs require the installation of a driver after you log in to them. For details about available ECS types as well as their functions and usage, see "Notes" in :ref:`ECS Types <en-us_topic_0035470096>`.
+-  Certain ECSs require the installation of a driver after you log in to them. For details about available ECS types and functions, see :ref:`ECS Types <en-us_topic_0035470096>`.

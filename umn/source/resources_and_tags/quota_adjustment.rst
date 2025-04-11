@@ -8,7 +8,7 @@ Quota Adjustment
 What Is Quota?
 --------------
 
-Quotas can limit the number or amount of resources available to users, such as the maximum number of ECSs or EVS disks that can be created.
+Quotas can limit the number or amount of resources available to users, such as the maximum number of ECS or EVS disks that can be created.
 
 If the existing resource quota cannot meet your service requirements, you can apply for a higher quota.
 
@@ -45,4 +45,4 @@ Before contacting the operations administrator, make sure that the following inf
    -  Required quota
 
 .. |image1| image:: /_static/images/en-us_image_0275513364.png
-.. |image2| image:: /_static/images/en-us_image_0152727234.png
+.. |image2| image:: /_static/images/en-us_image_0000002189833272.png

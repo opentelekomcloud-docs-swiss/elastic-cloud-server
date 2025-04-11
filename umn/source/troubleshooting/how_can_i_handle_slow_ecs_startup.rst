@@ -25,6 +25,10 @@ If an ECS requires a long period of time to start, you can change the default ti
 
 #. Change the timeout in the grub file to 0s.
 
+   .. caution::
+
+      This operation involves modifying the GRUB configuration file. Misoperations may cause the system to fail to start. Before the operation, back up the GRUB configuration file so that it can be restored in case of misoperations.
+
    -  If the grub version is earlier than 2:
 
       Open the **/boot/grub/grub.cfg** or **/boot/grub/menu.lst** file and change the **timeout** value to **0**.
@@ -34,7 +38,7 @@ If an ECS requires a long period of time to start, you can change the default ti
       Open the **/boot/grub2/grub.cfg** file and change the **timeout** value to **0**.
 
 
-   .. figure:: /_static/images/en-us_image_0117031548.gif
+   .. figure:: /_static/images/en-us_image_0000001782063672.png
       :alt: **Figure 2** Changing timeout duration
 
       **Figure 2** Changing timeout duration

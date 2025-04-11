@@ -5,24 +5,20 @@
 Instances
 =========
 
--  :ref:`Viewing ECS Information <en-us_topic_0030893661>`
 -  :ref:`Logging In to a Windows ECS <en-us_topic_0030888079>`
 -  :ref:`Logging In to a Linux ECS <en-us_topic_0030831990>`
--  :ref:`Managing ECSs <en-us_topic_0176502615>`
--  :ref:`Modifying ECS Specifications <en-us_topic_0030828258>`
--  :ref:`Migrating an ECS <en-us_topic_0133365988>`
--  :ref:`Obtaining Metadata and Passing User Data <en-us_topic_0140313879>`
--  :ref:`(Optional) Configuring Mapping Between Hostnames and IP Addresses <en-us_topic_0074752335>`
+-  :ref:`Managing ECS Configurations <en-us_topic_0176502615>`
+-  :ref:`Modifying ECS Specifications (vCPUs and Memory) <en-us_topic_0030828258>`
+-  :ref:`Reinstalling or Changing the OS <en-us_topic_0000001983533061>`
+-  :ref:`Viewing ECS Information <en-us_topic_0030893661>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   viewing_ecs_information/index
    logging_in_to_a_windows_ecs/index
    logging_in_to_a_linux_ecs/index
-   managing_ecss/index
-   modifying_ecs_specifications/index
-   migrating_an_ecs
-   obtaining_metadata_and_passing_user_data/index
-   optional_configuring_mapping_between_hostnames_and_ip_addresses
+   managing_ecs_configurations/index
+   modifying_ecs_specifications_vcpus_and_memory/index
+   reinstalling_or_changing_the_os/index
+   viewing_ecs_information/index

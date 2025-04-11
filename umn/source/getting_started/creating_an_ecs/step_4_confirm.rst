@@ -12,7 +12,7 @@ Confirming the Order
 
    To learn more about the price, click **Pricing details**.
 
-#. Set the number of ECSs to be created.
+#. Set **Quantity**.
 
    After the configuration, click **Price Calculator** to view the ECS configuration fee.
 

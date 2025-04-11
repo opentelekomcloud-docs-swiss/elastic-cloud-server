@@ -16,9 +16,9 @@ Prerequisites
 -------------
 
 -  The target ECS is running.
--  An EIP has been bound to the ECS. For details, see :ref:`Binding an EIP <en-us_topic_0174917535>`.
+-  You have bound an ECS to the EIP. For details about how to bind an EIP, see :ref:`Binding an EIP <en-us_topic_0174917535>`.
 
--  Access to port 22 is allowed in the inbound direction of the security group to which the ECS belongs. For details, see :ref:`Configuring Security Group Rules <en-us_topic_0030878383>`.
+-  Access to port 22 is allowed in the inbound direction of the security group which the ECS belongs to. For details, see :ref:`Configuring Security Group Rules <en-us_topic_0030878383>`.
 
 Solution
 --------
@@ -43,7 +43,7 @@ Solution
          -  The username is **core** for a CoreOS public image.
          -  The username is **root** for a non-CoreOS public image.
 
-      -  If the ECS is logged in using a password, the username is **root** for a public image.
+      -  If the ECS is logged in using a password, the username is **root** for a public image (including CoreOS).
 
    -  **Password**: the password set when you created the ECS or converted using a key.
 
