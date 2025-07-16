@@ -6,8 +6,8 @@
       - helpcenter-swiss-base-jobs
     vars:
       sphinx_pdf_files:
-        - ecs-api-ref.pdf
         - ecs-umn.pdf
+        - ecs-api-ref.pdf
     check:
       jobs:
         - noop
