@@ -14,6 +14,6 @@ An ECS is a computing server consisting of CPUs, memory, images, and Elastic Vol
       :api-ref: This document describes application programming interfaces (APIs) of Elastic Cloud Server (ECS) and provides API parameter description and example values.
 
    .. service_card_link::
-      :title: Best Practice
+      :title: Best Practices
       :url: https://arch.otc-service.com/docs/best-practices/computing/elastic-cloud-server
       :description: Discover our best practices for optimizing cloud-based solutions, focusing on architectural principles that ensure reliability, scalability, security, high availability, and fault tolerance in the Open Telekom Cloud Architecture Center.
