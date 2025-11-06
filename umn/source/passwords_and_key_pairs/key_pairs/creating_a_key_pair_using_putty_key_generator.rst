@@ -8,7 +8,7 @@ Creating a Key Pair Using PuTTY Key Generator
 Scenarios
 ---------
 
-You can use puttygen.exe to create a key pair and store both the public key and private key locally.
+You can use the third-party tool puttygen.exe to create a key pair. After the key pair is created, both the public key and private key are stored locally.
 
 .. note::
 
@@ -90,4 +90,4 @@ Procedure
 
       b. Save the private key, for example, **kp-123.pem**, locally.
 
-#. After you have saved the key pair, import your public key to the ECS by referring to :ref:`Importing a Key Pair <en-us_topic_0000001278734873>`.
+#. After the public key file and private key file are saved, import the public key to the system by referring to :ref:`Importing a Key Pair <en-us_topic_0000001278734873>`.

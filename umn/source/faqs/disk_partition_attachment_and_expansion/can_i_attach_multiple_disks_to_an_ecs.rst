@@ -46,7 +46,7 @@ To attach 60 disks, enable advanced disk. For details, see :ref:`Enabling Advanc
 How Can I Check Whether an ECS Is Created Before or After the Disk Function Upgrade?
 ------------------------------------------------------------------------------------
 
-#. Log in to management console.
+#. Log in to the management console.
 #. Under **Computing**, click **Elastic Cloud Server**.
 #. Click the name of the target ECS. The page providing details about the ECS is displayed.
 #. Click the **Disks** tab.

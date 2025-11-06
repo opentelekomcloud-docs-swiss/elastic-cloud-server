@@ -16,7 +16,7 @@ Prerequisites
 -------------
 
 -  The target ECS is running.
--  You have bound an ECS to the EIP. For details about how to bind an EIP, see :ref:`Binding an EIP <en-us_topic_0174917535>`.
+-  An EIP has been bound to the ECS. For details, see :ref:`Binding an EIP <en-us_topic_0174917535>`.
 
 -  Access to port 22 is allowed in the inbound direction of the security group which the ECS belongs to. For details, see :ref:`Configuring Security Group Rules <en-us_topic_0030878383>`.
 
@@ -38,7 +38,7 @@ Solution
    -  **Port number**: **22** by default.
    -  **User Name**: Enter the username for logging in to the ECS.
 
-      -  If the ECS is logged in using an SSH key pair,
+      -  If the ECS is logged in using an SSH key pair:
 
          -  The username is **core** for a CoreOS public image.
          -  The username is **root** for a non-CoreOS public image.

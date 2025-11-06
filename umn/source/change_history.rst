@@ -8,6 +8,10 @@ Change History
 +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Released On                       | Description                                                                                                                                                                    |
 +===================================+================================================================================================================================================================================+
+| 2025-09-30                        | Modified the following content:                                                                                                                                                |
+|                                   |                                                                                                                                                                                |
+|                                   | Added :ref:`Dynamically Assigning IPv6 Addresses <en-us_topic_0140963099>`.                                                                                                    |
++-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 2023-01-17                        | Modified the following content:                                                                                                                                                |
 |                                   |                                                                                                                                                                                |
 |                                   | Added the following content:                                                                                                                                                   |
@@ -27,7 +31,7 @@ Change History
 |                                   | -  Added :ref:`Quota Adjustment <en-us_topic_0000001210881033>`.                                                                                                               |
 |                                   | -  Changed S6 to S3 specifications in :ref:`General-Purpose ECSs <en-us_topic_0035470101>`.                                                                                    |
 |                                   | -  Deleted KMS and CTS in :ref:`ECS and Other Services <en-us_topic_0013771111>`.                                                                                              |
-|                                   | -  Updated operations in :ref:`Step 1: Configure Basic Settings <en-us_topic_0163572589>` and :ref:`Step 2: Configure Network <en-us_topic_0163572590>`.                       |
+|                                   | -  Updated operations in :ref:`Step 1: Configure Basic Settings <en-us_topic_0163572589>` and :ref:`Step 2: Configure Network Settings <en-us_topic_0163572590>`.              |
 |                                   | -  Added license type selection and deleted system disk encryption in :ref:`Reinstalling the OS <en-us_topic_0024911405>` and :ref:`Changing the OS <en-us_topic_0031523135>`. |
 |                                   | -  Added screenshots.                                                                                                                                                          |
 |                                   | -  Deleted content about user encryption.                                                                                                                                      |

@@ -8,20 +8,20 @@ Binding an EIP
 Scenarios
 ---------
 
-You can assign an EIP and bind it to an ECS to enable the ECS to access the Internet.
+You can assign an EIP and bind it to an ECS so that the ECS can access the public network.
 
 Procedure
 ---------
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner and select your region and project.
+#. Click |image1| in the upper left corner and select a region and project.
 
 #. Under **Computing**, click **Elastic Cloud Server**.
 
 #. On the **Elastic Cloud Server** page, click the name of the target ECS.
 
-   The page providing details about the ECS is displayed.
+   The ECS details page is displayed.
 
 #. On the **EIPs** tab, click **Bind EIP**.
 
@@ -33,4 +33,4 @@ Procedure
 
    View the bound EIP on the **EIPs** tab.
 
-.. |image1| image:: /_static/images/en-us_image_0210779229.png
+.. |image1| image:: /_static/images/en-us_image_0000002188678994.png

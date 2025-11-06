@@ -62,7 +62,7 @@ The following example shows you how a new primary partition can be created on a 
 
 #. Launch fdisk to partition the new data disk.
 
-   **fdisk** *New data disk*
+   **fdisk** *<new-data-disk>*
 
    In this example, run the following command:
 
@@ -203,7 +203,7 @@ The following example shows you how a new primary partition can be created on a 
 
 #. Format the new partition with a desired file system format.
 
-   **mkfs** **-t** *File system format* **/dev/vdb1**
+   **mkfs** **-t** *<file-system-format>* **/dev/vdb1**
 
    In this example, the **ext4** format is used for the new partition.
 
@@ -244,7 +244,7 @@ The following example shows you how a new primary partition can be created on a 
 
 #. Create a mount point.
 
-   **mkdir** *Mount point*
+   **mkdir** *<mount-point>*
 
    In this example, the **/mnt/sdc** mount point is created.
 
@@ -256,7 +256,7 @@ The following example shows you how a new primary partition can be created on a 
 
 #. Mount the new partition on the created mount point.
 
-   **mount** *Disk partition* *Mount point*
+   **mount** *<disk-partition>* *<mount-point>*
 
    In this example, the **/dev/vdb1** partition is mounted on **/mnt/sdc**.
 
@@ -303,7 +303,7 @@ The example here uses UUIDs to identify disks in the **fstab** file. You are adv
 
    Query the partition UUID.
 
-   **blkid** *Disk partition*
+   **blkid** *<disk-partition>*
 
    In this example, the UUID of the **/dev/vdb1** partition is queried.
 
@@ -357,7 +357,7 @@ The example here uses UUIDs to identify disks in the **fstab** file. You are adv
 
    a. Unmount the partition.
 
-      **umount** *Disk partition*
+      **umount** *<disk-partition>*
 
       In this example, run the following command:
 
@@ -369,7 +369,7 @@ The example here uses UUIDs to identify disks in the **fstab** file. You are adv
 
    c. Query the file system mounting information.
 
-      **mount** **\|** **grep** *Mount point*
+      **mount** **\|** **grep** *<mount-point>*
 
       In this example, run the following command:
 

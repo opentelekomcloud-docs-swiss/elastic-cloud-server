@@ -14,7 +14,7 @@ Advanced Settings
 
    If you want to create multiple ECSs all at one time, the system automatically sequences these ECSs.
 
-   The **ECS Name** set in this step will be the initial host name in the ECS OS.
+   The **ECS Name** set in this step will be the initial hostname in the ECS OS.
 
    .. note::
 
@@ -25,7 +25,7 @@ Advanced Settings
       -  Periods (.), hyphens (-), and underscores (_) at the beginning of the name will be ignored.
       -  For periods (.) that are not at the beginning of the name, they and any content following them will be ignored.
 
-#. (Optional) Set **Description**.
+#. (Optional) Enter the ECS description.
 
 #. Set **Login Mode**.
 
@@ -44,7 +44,7 @@ Advanced Settings
    -  Create new
 
       a. Enter the name of the cloud backup vault. The name consists of 1 to 64 characters. Only letters, digits, underscores (_), and hyphens (-) are allowed. For example, **vault-f61e**. The default naming rule is **vault\_**\ *xxxx*.
-      b. Enter the vault capacity, which is required for backing up the ECS. The vault capacity cannot be smaller than that of the ECS to be backed up. Its value ranges from the total capacity of the ECS to 10,485,760 in the unit of GB.
+      b. Enter the vault capacity, which is required for backing up the ECS. The vault capacity cannot be smaller than that of the ECS to be backed up. The value range is from the total capacity of the ECS to 10,485,760 in the unit of GiB.
       c. Select a backup policy from the drop-down list, or log in to the CBR console and configure a desired one.
 
    -  Specify
@@ -76,7 +76,7 @@ Advanced Settings
 
    -  Tag
 
-      This configuration is optional. You can tag an ECS to facilitate identification and management. A maximum of 10 tags can be added to an ECS.
+      This configuration is optional. You can tag an ECS to identify and manage your ECS resources easily. A maximum of 10 tags can be added to an ECS.
 
       .. note::
 

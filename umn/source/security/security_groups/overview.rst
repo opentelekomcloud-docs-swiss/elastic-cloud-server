@@ -14,7 +14,7 @@ You can also customize a security group or use the default one. The system provi
 
 .. note::
 
-   If two ECSs are in the same security group but in different VPCs, the security group does not take effect. You can use a VPC peering connection to connect the two VPCs first.
+   -  A security group works only when the network communication is normal. If two ECSs are in the same security group but in different VPCs, the security group does not take effect. You can use a VPC peering connection to connect the two VPCs first.
 
 Security Group Rules
 --------------------
@@ -23,8 +23,8 @@ After a security group is created, you can add rules to the security group. A ru
 
 Each security group has default rules. For details, see :ref:`Default Security Groups and Rules <en-us_topic_0140323154>`. You can also customize security group rules. For details, see :ref:`Configuring Security Group Rules <en-us_topic_0030878383>`.
 
-Constraints
------------
+Constraints on Using Security Groups
+------------------------------------
 
 -  By default, you can add up to 50 security group rules to a security group.
 -  By default, you can associate no more than five security groups with each cloud server or extended network interface. In such a case, the rules of all the selected security groups are combined and applied together.

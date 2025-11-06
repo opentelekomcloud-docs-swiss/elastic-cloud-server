@@ -8,20 +8,20 @@ Adding a NIC
 Scenarios
 ---------
 
-If your ECS requires multiple network interfaces, you can add them to your ECS.
+If your ECS requires multiple NICs, you can add them to your ECS.
 
 Procedure
 ---------
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner and select your region and project.
+#. Click |image1| in the upper left corner and select a region and project.
 
 #. Under **Computing**, click **Elastic Cloud Server**.
 
 #. Click the name of the ECS to which you want to add a NIC.
 
-   The page providing details about the ECS is displayed.
+   The ECS details page is displayed.
 
 #. On the **NICs** tab, click **Add NIC**.
 
@@ -70,7 +70,7 @@ Some OSs cannot identify newly added NICs. In this case, you need to manually ac
 
 #. Run either the **ifup eth**\ **X** command or the **/etc/init.d/networking restart** command to make the newly added NIC take effect.
 
-   *X* in the preceding command indicates the serial number of the network interface, for example, **ifup eth2**.
+   *X* in the preceding command indicates the serial number of the NIC, for example, **ifup eth2**.
 
 #. Run the following command to check whether the NIC name obtained in step :ref:`2 <en-us_topic_0093492518__li595089165210>` is displayed in the command output:
 
@@ -83,11 +83,11 @@ Some OSs cannot identify newly added NICs. In this case, you need to manually ac
 
 #. .. _en-us_topic_0093492518__li1695469165210:
 
-   Log in to the management console. Locate the row containing the target ECS, click **More** in the **Operation** column, and select **Restart**.
+   Log in to the management console. On the ECS list page, locate the row that contains the target ECS and choose **More** > **Restart** in the **Operation** column.
 
-#. Run **ifconfig** again to check whether the NIC name obtained in step :ref:`2 <en-us_topic_0093492518__li595089165210>` is displayed in the command output:
+#. Run **ifconfig** again to check whether the NIC name obtained in step :ref:`2 <en-us_topic_0093492518__li595089165210>` is displayed in the command output.
 
    -  If yes, no further action is required.
    -  If no, contact the administrator.
 
-.. |image1| image:: /_static/images/en-us_image_0210779229.png
+.. |image1| image:: /_static/images/en-us_image_0000002188678994.png

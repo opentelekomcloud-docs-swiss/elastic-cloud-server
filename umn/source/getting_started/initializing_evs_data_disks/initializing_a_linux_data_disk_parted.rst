@@ -51,7 +51,7 @@ The following example shows you how a new partition can be created on a new data
 
 #. Launch parted to partition the new data disk.
 
-   **parted** *New data disk*
+   **parted** *<new-data-disk>*
 
    In this example, run the following command:
 
@@ -86,7 +86,7 @@ The following example shows you how a new partition can be created on a new data
 
 #. Set the disk partition style.
 
-   **mklabel** *Disk partition style*
+   **mklabel** *<disk-partition-style>*
 
    This command lets you control whether to use MBR or GPT for your partition table. In this example, GPT is used.
 
@@ -122,7 +122,7 @@ The following example shows you how a new partition can be created on a new data
 
 #. Create a new partition.
 
-   **mkpart** *Partition name Start sector* *End sector*
+   **mkpart** *<partition-name> <start-sector>* *<end-sector>*
 
    In this example, run the following command:
 
@@ -185,7 +185,7 @@ The following example shows you how a new partition can be created on a new data
 
 #. Format the new partition with a desired file system format.
 
-   **mkfs** **-t** *File system format* **/dev/vdb1**
+   **mkfs** **-t** *<file-system-format>* **/dev/vdb1**
 
    In this example, the **ext4** format is used for the new partition.
 
@@ -226,7 +226,7 @@ The following example shows you how a new partition can be created on a new data
 
 #. Create a mount point.
 
-   **mkdir** *Mount point*
+   **mkdir** *<mount-point>*
 
    In this example, the **/mnt/sdc** mount point is created.
 
@@ -238,7 +238,7 @@ The following example shows you how a new partition can be created on a new data
 
 #. Mount the new partition on the created mount point.
 
-   **mount** *Disk partition* *Mount point*
+   **mount** *<disk-partition>* *<mount-point>*
 
    In this example, the **/dev/vdb1** partition is mounted on **/mnt/sdc**.
 
@@ -285,7 +285,7 @@ The following example uses UUIDs to identify disks in the **fstab** file. You ar
 
    Query the partition UUID.
 
-   **blkid** *Disk partition*
+   **blkid** *<disk-partition>*
 
    In this example, the UUID of the **/dev/vdb1** partition is queried.
 
@@ -339,7 +339,7 @@ The following example uses UUIDs to identify disks in the **fstab** file. You ar
 
    a. Unmount the partition.
 
-      **umount** *Disk partition*
+      **umount** *<disk-partition>*
 
       In this example, run the following command:
 
@@ -351,7 +351,7 @@ The following example uses UUIDs to identify disks in the **fstab** file. You ar
 
    c. Query the file system mounting information.
 
-      **mount** **\|** **grep** *Mount point*
+      **mount** **\|** **grep** *<mount-point>*
 
       In this example, run the following command:
 

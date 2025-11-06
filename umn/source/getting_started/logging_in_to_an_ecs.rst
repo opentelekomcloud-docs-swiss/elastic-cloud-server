@@ -30,7 +30,7 @@ You can log in to a Windows ECS using either VNC or MSTSC provided on the manage
 
    -  Remote desktop connection (MSTSC)
 
-      For details, see :ref:`Logging In to a Windows ECS Using MSTSC <en-us_topic_0017955381>`.
+      For details, see :ref:`Logging In to a Windows ECS from a Windows Server <en-us_topic_0017955381>`.
 
 Logging In to a Linux ECS
 -------------------------
@@ -62,4 +62,4 @@ Follow-up Procedure
 
    For details, see :ref:`Scenarios and Disk Partitions <en-us_topic_0030831623>`.
 
--  Certain ECSs require the installation of a driver after you log in to them. For details about available ECS types and functions, see :ref:`ECS Types <en-us_topic_0035470096>`.
+-  For certain ECSs, you need to install a driver after logging in to them. For details about available ECS types and functions, see :ref:`ECS Types <en-us_topic_0035470096>`.
