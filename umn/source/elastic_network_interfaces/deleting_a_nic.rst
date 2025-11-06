@@ -19,13 +19,13 @@ Procedure
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner and select your region and project.
+#. Click |image1| in the upper left corner and select a region and project.
 
 #. Under **Computing**, click **Elastic Cloud Server**.
 
 #. In the ECS list, click the name of the ECS from which you want to delete a NIC
 
-   The page providing details about the ECS is displayed.
+   The ECS details page is displayed.
 
 #. Click the **NICs** tab. Then, click **Delete** in the row of the target network interface.
 
@@ -39,4 +39,4 @@ Procedure
 
       Certain ECSs do not support NIC deletion when they are running. For details, see the GUI display. To delete a NIC from such an ECS, stop the ECS first.
 
-.. |image1| image:: /_static/images/en-us_image_0093507592.png
+.. |image1| image:: /_static/images/en-us_image_0000002188678994.png

@@ -34,13 +34,13 @@ The following uses CentOS 7.9 as an example. The operations apply to CentOS 7.9 
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner and select your region and project.
+#. Click |image1| in the upper left corner and select a region and project.
 
 #. Under **Computing**, click **Elastic Cloud Server**.
 
 #. In the search box above the upper right corner of the ECS list, enter the proxy ECS name for search.
 
-#. Click the name of the proxy ECS. The page providing details about the ECS is displayed.
+#. Click the name of the proxy ECS. The ECS details page is displayed.
 
 #. On the **Network Interfaces** tab, click |image2|. Then, disable **Source/Destination Check**.
 
@@ -147,7 +147,7 @@ The following uses CentOS 7.9 as an example. The operations apply to CentOS 7.9 
 #. Add a route.
 
    a. Log in to the management console.
-   b. Click |image3| in the upper left corner and select your region and project.
+   b. Click |image3| in the upper left corner and select a region and project.
    c. Under **Network**, click **Virtual Private Cloud**.
    d. Choose **Route Tables** in the left navigation pane. In the route table list, click a target route table. On the displayed page, click **Add Route**.
    e. Set route information on the displayed page.
@@ -166,6 +166,6 @@ The following uses CentOS 7.9 as an example. The operations apply to CentOS 7.9 
 
    **iptables -t nat -D POSTROUTING -o eth0 -s 192.168.125.0/24 -j SNAT --to 192.168.125.4**
 
-.. |image1| image:: /_static/images/en-us_image_0210779229.png
+.. |image1| image:: /_static/images/en-us_image_0000002188678994.png
 .. |image2| image:: /_static/images/en-us_image_0128851717.png
-.. |image3| image:: /_static/images/en-us_image_0210779229.png
+.. |image3| image:: /_static/images/en-us_image_0000002188678994.png

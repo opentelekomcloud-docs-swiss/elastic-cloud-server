@@ -9,7 +9,7 @@ Constraints
 -----------
 
 -  Only a running ECS can be logged in to.
--  For ECSs created using public images, login usernames, passwords, and constraints vary depending on OSs running on the ECSs.
+-  For ECSs created using public images, the login usernames, passwords, and constraints vary depending on OSs running on the ECSs.
 
 Login Modes
 -----------

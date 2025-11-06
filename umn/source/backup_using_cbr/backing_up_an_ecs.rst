@@ -22,9 +22,9 @@ ECS Backup Procedure
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner and select your region and project.
+#. Click |image1| in the upper left corner and select a region and project.
 
-#. Under **Computing**, choose **Elastic Cloud Server**.
+#. Under **Computing**, click **Elastic Cloud Server**.
 
 #. In the ECS list, locate the target ECS and choose **More** > **Manage Image/Disk/Backup** > **Create Backup**.
 
@@ -50,9 +50,9 @@ EVS Disk Backup Procedure
 
 #. Log in to the management console.
 
-#. Click |image2| in the upper left corner and select your region and project.
+#. Click |image2| in the upper left corner and select a region and project.
 
-#. Under **Computing**, choose **Elastic Cloud Server**.
+#. Under **Computing**, click **Elastic Cloud Server**.
 
 #. In the ECS list, locate the target ECS and choose **More** > **Create Backup**.
 
@@ -73,6 +73,6 @@ EVS Disk Backup Procedure
 
    If some files are deleted from the disk during the backup, the deleted files may fail to be backed up. Therefore, to ensure data integrity, delete the target data after the backup is complete.
 
-.. |image1| image:: /_static/images/en-us_image_0210779229.png
-.. |image2| image:: /_static/images/en-us_image_0210779229.png
+.. |image1| image:: /_static/images/en-us_image_0000002188678994.png
+.. |image2| image:: /_static/images/en-us_image_0000002188678994.png
 .. |image3| image:: /_static/images/en-us_image_0000001128656892.png

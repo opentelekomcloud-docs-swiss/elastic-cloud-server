@@ -5,7 +5,7 @@
 Security Group Configuration Examples
 =====================================
 
-When you create instances, such as cloud servers, containers, and databases, in a VPC subnet, you can use the default security group or create a security group. You can add inbound and outbound rules to the default or your security group to control traffic from and to the instances in the security group. Here are some common security group configuration examples:
+When you create instances, such as cloud servers, containers, and databases, in a VPC subnet, you can :ref:`use the default security group <en-us_topic_0140323154>` or create a security group. You can :ref:`add inbound and outbound rules <en-us_topic_0030878383>` to the default or your created security group to control traffic from and to the instances in the security group. Here are some common security group configuration examples:
 
 -  :ref:`Remotely Logging In to an ECS from a Local Server <en-us_topic_0140323152__en-us_topic_0118534011_section14933617154810>`
 -  :ref:`Remotely Connecting to an ECS from a Local Server to Upload or Download Files over FTP <en-us_topic_0140323152__en-us_topic_0118534011_section8685162114185>`
@@ -15,18 +15,18 @@ When you create instances, such as cloud servers, containers, and databases, in 
 -  :ref:`Allowing External Instances to Access the Database Deployed on an ECS <en-us_topic_0140323152__en-us_topic_0118534011_section7465183583515>`
 -  :ref:`Allowing ECSs to Access Only Specific External Websites <en-us_topic_0140323152__en-us_topic_0118534011_section949023514612>`
 
-Precautions
------------
+Notes
+-----
 
 Note the following before configuring security group rules:
 
--  Instances associated with different security groups are isolated from each other by default.
+-  **Instances associated with different security groups are isolated from each other by default.**
 
--  Generally, a security group denies all external requests by default, while allowing instances in it to communicate with each other.
+-  **Generally, a security group denies all external requests by default,** while allowing instances in it to communicate with each other.
 
    If required, you can add inbound rules to allow specific traffic to access the instances in the security group.
 
--  By default, outbound security group rules allow all requests from the instances in the security group to access external resources.
+-  **By default, outbound security group rules allow all requests from the instances in the security group to access external resources.**
 
    If outbound rules are deleted, the instances in the security group cannot communicate with external resources. To allow outbound traffic, you need to add outbound rules by referring to :ref:`Table 1 <en-us_topic_0140323152__en-us_topic_0118534011_table102261597217>`.
 
@@ -71,7 +71,7 @@ A security group denies all external requests by default. To remotely log in to 
       Inbound   TCP: 3389       IP address: 0.0.0.0/0
       ========= =============== =====================
 
-   .. important::
+   .. caution::
 
       If the source is set to 0.0.0.0/0, all external IP addresses are allowed to remotely log in to the ECS. To ensure network security and prevent service interruptions caused by network intrusions, set the source to a trusted IP address. For details, see :ref:`Table 4 <en-us_topic_0140323152__en-us_topic_0118534011_table1919016251434>`.
 
@@ -101,7 +101,7 @@ By default, a security group denies all external requests. If you need to remote
    Inbound   TCP: 20-21      IP address: 0.0.0.0/0
    ========= =============== =====================
 
-.. important::
+.. caution::
 
    -  If the source is set to 0.0.0.0/0, all external IP addresses are allowed to remotely log in to the ECS to upload or download files. To ensure network security and prevent service interruptions caused by network intrusions, set the source to a trusted IP address. For details, see :ref:`Table 6 <en-us_topic_0140323152__en-us_topic_0118534011_table127653483419>`.
    -  You must first install the FTP server program on the ECSs and then check whether ports 20 and 21 are working properly.
@@ -123,7 +123,7 @@ Setting Up a Website on an ECS to Provide Internet-Accessible Services
 
 A security group denies all external requests by default. If you set up a website on an ECS to allow access from the Internet, you need to add an inbound rule to the ECS security group to allow access over specific ports, such as HTTP (80) and HTTPS (443).
 
-.. table:: **Table 7** Setting up a website on an ECS to provide services internet-accessible services
+.. table:: **Table 7** Setting up a website on an ECS to provide internet-accessible services
 
    ========= =============== =====================
    Direction Protocol & Port Source
@@ -175,6 +175,8 @@ A security group denies all external requests by default. If you have deployed a
 -  PostgreSQL: port 5432
 -  Redis: port 6379
 
+In this example, the source is for reference only. Set the source based on actual requirements.
+
 .. table:: **Table 10** Allowing external instances to access the database deployed on an ECS
 
    +-----------+-----------------+----------------------------+-------------------------------------------------------------------------------------------------------------+
@@ -188,10 +190,6 @@ A security group denies all external requests by default. If you have deployed a
    +-----------+-----------------+----------------------------+-------------------------------------------------------------------------------------------------------------+
    | Inbound   | TCP: 5432       | IP address: 192.168.0.0/24 | Allows ECSs whose private IP addresses are in the 192.168.0.0/24 network to access the PostgreSQL database. |
    +-----------+-----------------+----------------------------+-------------------------------------------------------------------------------------------------------------+
-
-.. important::
-
-   In this example, the source IP addresses are for reference only. Replace them with actual IP addresses.
 
 .. _en-us_topic_0140323152__en-us_topic_0118534011_section949023514612:
 

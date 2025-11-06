@@ -8,7 +8,7 @@ Viewing Failed Tasks
 Scenarios
 ---------
 
-You can view the details of failed task (if any) in the **Failures** area, including the task names and statuses. This section describes how to view failures.
+You can view the details of failed tasks (if there are any) in the **Failures** area, including the task names and statuses. This section describes how to view failures.
 
 Failure Types
 -------------
@@ -33,12 +33,12 @@ Procedure
 ---------
 
 #. Log in to the management console.
-#. Click |image1| in the upper left corner and select your region and project.
-#. Under **Computing**, choose **Elastic Cloud Server**.
+#. Click |image1| in the upper left corner and select a region and project.
+#. Under **Computing**, click **Elastic Cloud Server**.
 #. View **Failures** on the right side of common operations.
 #. Click the number displayed in the **Failures** area to view task details.
 
    -  **Creation Failures**: show the failed ECS creation tasks.
    -  **Operation Failures**: show the tasks with failed operations and error codes, which help you troubleshoot the faults.
 
-.. |image1| image:: /_static/images/en-us_image_0210779229.png
+.. |image1| image:: /_static/images/en-us_image_0000002188678994.png

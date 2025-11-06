@@ -37,7 +37,7 @@ The operations described in this section are provided for the ECSs running Windo
 
 #. Configure virtual memory based on service requirements.
 
-   -  **Automatically manage paging file size for all drives**: Deselect the check box.
+   -  **Automatically manage paging file size for all drives**: Deselect the checkbox.
 
    -  **Drive**: Select the drive where the virtual memory file is stored.
 
@@ -45,7 +45,7 @@ The operations described in this section are provided for the ECSs running Windo
 
    -  **Custom size**: Select **Custom size** and set **Initial size** and **Maximum size**.
 
-      Considering **Memory.dmp** caused by blue screen of death (BSOD), you are advised to set **Initial size** to **16** and **Maximum size** to **4,096**.
+      Considering **Memory.dmp** caused by blue screen of death (BSOD), you are advised to set **Initial size** to **16** and **Maximum size** to **4096**.
 
 
    .. figure:: /_static/images/en-us_image_0120795935.png

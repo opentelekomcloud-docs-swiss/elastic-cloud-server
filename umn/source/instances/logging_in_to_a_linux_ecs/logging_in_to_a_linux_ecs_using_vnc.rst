@@ -60,41 +60,41 @@ Login Notes
 
    .. table:: **Table 2** Language configuration in the four types of keyboards
 
-      +-------------------+---------------------------------------+--------------+-----------------+------------------+
-      | Physical Keyboard | Input Method Keyboard on the Terminal | VNC Keyboard | ECS OS Keyboard | Supported or Not |
-      +===================+=======================================+==============+=================+==================+
-      | English           | English                               | English      | English         | Yes              |
-      +-------------------+---------------------------------------+--------------+-----------------+------------------+
-      |                   |                                       |              | German          | No               |
-      +-------------------+---------------------------------------+--------------+-----------------+------------------+
-      |                   |                                       | German       | English         | No               |
-      +-------------------+---------------------------------------+--------------+-----------------+------------------+
-      |                   |                                       |              | German          | No               |
-      +-------------------+---------------------------------------+--------------+-----------------+------------------+
-      |                   | German                                | English      | English         | No               |
-      +-------------------+---------------------------------------+--------------+-----------------+------------------+
-      |                   |                                       |              | German          | No               |
-      +-------------------+---------------------------------------+--------------+-----------------+------------------+
-      |                   |                                       | German       | English         | No               |
-      +-------------------+---------------------------------------+--------------+-----------------+------------------+
-      |                   |                                       |              | German          | No               |
-      +-------------------+---------------------------------------+--------------+-----------------+------------------+
-      | German            | English                               | English      | English         | No               |
-      +-------------------+---------------------------------------+--------------+-----------------+------------------+
-      |                   |                                       |              | German          | No               |
-      +-------------------+---------------------------------------+--------------+-----------------+------------------+
-      |                   |                                       | German       | English         | No               |
-      +-------------------+---------------------------------------+--------------+-----------------+------------------+
-      |                   |                                       |              | German          | No               |
-      +-------------------+---------------------------------------+--------------+-----------------+------------------+
-      |                   | German                                | English      | English         | No               |
-      +-------------------+---------------------------------------+--------------+-----------------+------------------+
-      |                   |                                       |              | German          | No               |
-      +-------------------+---------------------------------------+--------------+-----------------+------------------+
-      |                   |                                       | German       | English         | No               |
-      +-------------------+---------------------------------------+--------------+-----------------+------------------+
-      |                   |                                       |              | German          | Yes              |
-      +-------------------+---------------------------------------+--------------+-----------------+------------------+
+      +-------------------+---------------------------------------+--------------+-----------------+-----------+
+      | Physical Keyboard | Input Method Keyboard on the Terminal | VNC Keyboard | ECS OS Keyboard | Supported |
+      +===================+=======================================+==============+=================+===========+
+      | English           | English                               | English      | English         | Yes       |
+      +-------------------+---------------------------------------+--------------+-----------------+-----------+
+      |                   |                                       |              | German          | No        |
+      +-------------------+---------------------------------------+--------------+-----------------+-----------+
+      |                   |                                       | German       | English         | No        |
+      +-------------------+---------------------------------------+--------------+-----------------+-----------+
+      |                   |                                       |              | German          | No        |
+      +-------------------+---------------------------------------+--------------+-----------------+-----------+
+      |                   | German                                | English      | English         | No        |
+      +-------------------+---------------------------------------+--------------+-----------------+-----------+
+      |                   |                                       |              | German          | No        |
+      +-------------------+---------------------------------------+--------------+-----------------+-----------+
+      |                   |                                       | German       | English         | No        |
+      +-------------------+---------------------------------------+--------------+-----------------+-----------+
+      |                   |                                       |              | German          | No        |
+      +-------------------+---------------------------------------+--------------+-----------------+-----------+
+      | German            | English                               | English      | English         | No        |
+      +-------------------+---------------------------------------+--------------+-----------------+-----------+
+      |                   |                                       |              | German          | No        |
+      +-------------------+---------------------------------------+--------------+-----------------+-----------+
+      |                   |                                       | German       | English         | No        |
+      +-------------------+---------------------------------------+--------------+-----------------+-----------+
+      |                   |                                       |              | German          | No        |
+      +-------------------+---------------------------------------+--------------+-----------------+-----------+
+      |                   | German                                | English      | English         | No        |
+      +-------------------+---------------------------------------+--------------+-----------------+-----------+
+      |                   |                                       |              | German          | No        |
+      +-------------------+---------------------------------------+--------------+-----------------+-----------+
+      |                   |                                       | German       | English         | No        |
+      +-------------------+---------------------------------------+--------------+-----------------+-----------+
+      |                   |                                       |              | German          | Yes       |
+      +-------------------+---------------------------------------+--------------+-----------------+-----------+
 
 #. If the password used when you create the ECS is entered using the English keyboard, you must use the English keyboard to enter the password when logging in to the ECS later.
 
@@ -105,7 +105,7 @@ Logging In to an ECS Using an English Keyboard
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner and select your region and project.
+#. Click |image1| in the upper left corner and select a region and project.
 
 #. Under **Computing**, click **Elastic Cloud Server**.
 
@@ -119,7 +119,7 @@ Logging In to an ECS Using an English Keyboard
 
 #. Click **Remote Login**.
 
-#. (Optional) If you have changed the system language, in the displayed dialog box, click **Start Remote Login**.
+#. (Optional) If you have changed the system language, in the displayed dialog box, click **Remote Login**.
 
 #. (Optional) When the system displays "Press CTRL+ALT+DELETE to log on", click **Send CtrlAltDel** in the upper part of the remote login page to log in to the ECS.
 
@@ -145,7 +145,7 @@ Logging In to an ECS Using a Non-English Keyboard
 -------------------------------------------------
 
 #. Log in to the management console.
-#. Click |image3| in the upper left corner and select your region and project.
+#. Click |image3| in the upper left corner and select a region and project.
 #. Under **Computing**, click **Elastic Cloud Server**.
 #. In the search box above the upper right corner of the ECS list, enter the ECS name, IP address, or ID, and click |image4| for search.
 #. Locate the row containing the ECS and click **Remote Login** in the **Operation** column.
@@ -153,7 +153,7 @@ Logging In to an ECS Using a Non-English Keyboard
 
 7.  Click **Remote Login**.
 
-8.  (Optional) If you have changed the system language, in the displayed dialog box, click **Start Remote Login**.
+8.  (Optional) If you have changed the system language, in the displayed dialog box, click **Remote Login**.
 
 9.  (Optional) When the system displays "Press CTRL+ALT+DELETE to log on", click **Send CtrlAltDel** in the upper part of the remote login page to log in to the ECS.
 
@@ -239,7 +239,7 @@ In this case, you must change the languages of the other three types of keyboard
 
    For details, see :ref:`Logging In to an ECS Using a Non-English Keyboard <en-us_topic_0093263550__en-us_topic_0027268511_section5982347111459>`.
 
-To set the languages on the four types of keyboards to all be the same, perform :ref:`1 <en-us_topic_0093263550__en-us_topic_0027268511_en-us_topic_0039525621_li55865773114331>` to :ref:`4 <en-us_topic_0093263550__en-us_topic_0027268511_en-us_topic_0039525621_li62706781115148>`.
+To set the same language across the four types of keyboards, perform steps :ref:`1 <en-us_topic_0093263550__en-us_topic_0027268511_en-us_topic_0039525621_li55865773114331>` to :ref:`4 <en-us_topic_0093263550__en-us_topic_0027268511_en-us_topic_0039525621_li62706781115148>`.
 
 .. note::
 
@@ -290,7 +290,7 @@ For FAQs about VNC-based ECS logins, see the following links:
 -  :ref:`Why Are Characters Entered Through VNC Still Incorrect After the Keyboard Language Is Switched? <en-us_topic_0030932500>`
 -  :ref:`Why Does a Blank Screen Appear After I Attempted to Log In to an ECS Using VNC? <en-us_topic_0032850906>`
 
-.. |image1| image:: /_static/images/en-us_image_0210779229.png
+.. |image1| image:: /_static/images/en-us_image_0000002357961897.png
 .. |image2| image:: /_static/images/en-us_image_0128851444.png
-.. |image3| image:: /_static/images/en-us_image_0210779229.png
+.. |image3| image:: /_static/images/en-us_image_0000002323963330.png
 .. |image4| image:: /_static/images/en-us_image_0128851405.png

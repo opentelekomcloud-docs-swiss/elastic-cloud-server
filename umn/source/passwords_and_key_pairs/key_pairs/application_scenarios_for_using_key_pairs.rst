@@ -8,9 +8,9 @@ Application Scenarios for Using Key Pairs
 Key Pairs
 ---------
 
-Key pairs are a set of security credentials for identity authentication when you remotely log in to ECSs.
+Key pairs (SSH key pairs) are a set of security credentials for identity authentication when you remotely log in to ECSs.
 
-A key pair consists of a public key and a private key. Key Pair Service (KPS) stores the public key and you store the private key. If you have imported a public key into a Linux ECS, you can use the corresponding private key to log in to the ECS without a password. You do not need to worry about password interception, cracking, or leakage.
+A key pair consists of a public key and a private key. Key Pair Service (KPS) stores the public key and you store the private key. If you have bound a public key to a Linux ECS, you can use the corresponding private key, rather than a password, to log in to the ECS. You do not need to worry about password interception, cracking, or leakage.
 
 Scenarios
 ---------
@@ -22,7 +22,7 @@ When purchasing an ECS, you are advised to select the key pair login mode. For W
    You can directly use a key pair to log in a Linux ECS.
 
    -  During the ECS creation, select the key pair login mode. For details, see "Set **Login Mode**" in :ref:`Step 3: Configure Advanced Settings <en-us_topic_0163572591>`.
-   -  After the ECS is created, bind a key pair to the ECS by referring to "Binding a Key Pair" in the *Data Encryption Workshop User Guide*.
+   -  After the ECS is created, bind a key pair to the ECS by referring to "Binding a Key Pair" in the *Key Management Service User Guide*.
 
 -  Logging in to a Windows ECS
 
@@ -51,12 +51,12 @@ You can create a key pair or use an existing one for remote login authentication
 
    .. note::
 
-      If the public key of the existing key pair is stored by clicking **Save public key** on PuTTY Key Generator, the public key cannot be imported to the management console.
+      If the public key of the existing key pair is stored by clicking **Save public key** on puttygen.exe, the public key cannot be imported to the management console.
 
       If you want to use this existing key pair for remote login, see :ref:`Why Does a Key Pair Created Using puttygen.exe Fail to Be Imported on the Management Console? <en-us_topic_0047654687>`
 
-Notes and Constraints
----------------------
+Constraints
+-----------
 
 -  Key pairs can be used to remotely log in to Linux ECSs only.
 -  SSH-2 key pairs created on the console support only the RSA-2048 cryptographic algorithms.
@@ -67,4 +67,4 @@ Notes and Constraints
    -  RSA-2048
    -  RSA-4096
 
--  Store your private key in a secure place because you need to use it to prove your identity when logging in to your ECS. The private key can be downloaded once only.
+-  Store your private key in a secure place because you need to use it to prove your identity when logging in to your ECS. The private key can be downloaded only once.

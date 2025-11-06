@@ -17,7 +17,7 @@ Obtaining the Disk ID of an ECS on the Console
 
 #. Log in to the management console.
 
-#. Under **Computing**, choose **Elastic Cloud Server**.
+#. Choose **Computing** > **Elastic Cloud Server**.
 
 #. Click the target ECS name in the ECS list.
 
@@ -70,7 +70,7 @@ If a serial number is displayed on the console, use either of the following meth
 
    **wmic path Win32_DiskDrive get SerialNumber**
 
-   Information similar to the following is displayed:
+   The following information is displayed.
 
 
    .. figure:: /_static/images/en-us_image_0000001127902463.png

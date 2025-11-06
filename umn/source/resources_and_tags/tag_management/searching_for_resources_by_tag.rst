@@ -14,9 +14,9 @@ On the **Elastic Cloud Server** page, search for ECSs by tag key or value.
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner and select your region and project.
+#. Click |image1| in the upper left corner and select a region and project.
 
-#. Under **Computing**, choose **Elastic Cloud Server**.
+#. Under **Computing**, click **Elastic Cloud Server**.
 
 #. Click **Search by Tag** above the upper right corner of the ECS list to expand the search area.
 
@@ -51,4 +51,4 @@ Filtering Resources on the TMS Console
 
    All the resources that meet the search criteria will be displayed in the **Search Result** area.
 
-.. |image1| image:: /_static/images/en-us_image_0210779229.png
+.. |image1| image:: /_static/images/en-us_image_0000002188678994.png

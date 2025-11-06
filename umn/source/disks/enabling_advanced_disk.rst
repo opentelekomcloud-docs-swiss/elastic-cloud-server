@@ -18,11 +18,11 @@ Procedure
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner and select your region and project.
+#. Click |image1| in the upper left corner and select a region and project.
 
 #. Under **Computing**, click **Elastic Cloud Server**.
 
-#. Click the name of the target ECS. The page providing details about the ECS is displayed.
+#. Click the name of the target ECS. The ECS details page is displayed.
 
 #. Click the **Disks** tab.
 
@@ -36,9 +36,9 @@ Procedure
 
    This operation allows advanced disk to take effect.
 
-#. Switch to the page providing details about the ECS again, click the **Disks** tab, and check whether the number of disks that can be attached to the ECS has been changed.
+#. Switch to the ECS details page again, click the **Disks** tab, and check whether the number of disks that can be attached to the ECS has been changed.
 
    -  If yes, advanced disk has been enabled.
    -  If no, enabling advanced disk failed. In such a case, contact the administrator.
 
-.. |image1| image:: /_static/images/en-us_image_0210779229.png
+.. |image1| image:: /_static/images/en-us_image_0000002188678994.png

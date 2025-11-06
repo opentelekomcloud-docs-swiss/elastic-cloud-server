@@ -8,15 +8,15 @@ Importing a Key Pair
 Scenarios
 ---------
 
-You need to import a key pair in either of the following scenarios:
+You need to import a key pair to the ECS when you:
 
--  Create a key pair using PuTTYgen and import the public key to the ECS.
+-  Create a key pair using puttygen.exe.
 
--  Import the public key of an existing key pair to the ECS to let the system maintain your public key.
+-  Import the public key of an existing local key pair (for example, generated using PuTTYgen) to let the system maintain your public key.
 
    .. note::
 
-      If the public key of the existing key pair is stored by clicking **Save public key** on PuTTY Key Generator, the public key cannot be imported to the management console.
+      If the public key of the existing key pair is stored by clicking **Save public key** on puttygen.exe, the public key cannot be imported to the management console.
 
       If you want to use this existing key pair for remote login, see :ref:`Why Does a Key Pair Created Using puttygen.exe Fail to Be Imported on the Management Console? <en-us_topic_0047654687>`
 
@@ -24,7 +24,7 @@ Procedure
 ---------
 
 #. Log in to the management console.
-#. Click |image1| in the upper left corner and select your region and project.
+#. Click |image1| in the upper left corner and select a region and project.
 #. Under **Computing**, click **Elastic Cloud Server**.
 #. In the navigation pane on the left, choose **Key Pair**.
 #. On the **Key Pair Service** page, click **Import Key Pair**.
@@ -53,4 +53,4 @@ Helpful Links
 -  :ref:`What Should I Do If a Key Pair Cannot Be Imported? <en-us_topic_0019883415>`
 -  :ref:`Why Does a Key Pair Created Using puttygen.exe Fail to Be Imported on the Management Console? <en-us_topic_0047654687>`
 
-.. |image1| image:: /_static/images/en-us_image_0210779229.png
+.. |image1| image:: /_static/images/en-us_image_0000002188678994.png

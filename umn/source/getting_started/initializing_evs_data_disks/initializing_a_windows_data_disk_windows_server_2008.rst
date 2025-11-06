@@ -140,6 +140,6 @@ Procedure
 
 
    .. figure:: /_static/images/en-us_image_0000001809189772.png
-      :alt: **Figure 11** Disk initialization succeeded
+      :alt: **Figure 11** Disk initialized
 
-      **Figure 11** Disk initialization succeeded
+      **Figure 11** Disk initialized

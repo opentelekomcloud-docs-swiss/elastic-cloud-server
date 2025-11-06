@@ -19,9 +19,9 @@ Constraints
 Procedure
 ---------
 
-#. Log in to the management console.
+#. Log in to the console and access the ECS list page.
 
-#. Click |image1| in the upper left corner and select your region and project.
+#. Click |image1| in the upper left corner and select a region and project.
 
 #. Under **Computing**, click **Elastic Cloud Server**.
 
@@ -30,7 +30,7 @@ Procedure
    The **Change Security Group** dialog box is displayed.
 
 
-   .. figure:: /_static/images/en-us_image_0162733894.png
+   .. figure:: /_static/images/en-us_image_0000002385344877.png
       :alt: **Figure 1** Change Security Group
 
       **Figure 1** Change Security Group
@@ -43,8 +43,8 @@ Procedure
 
    .. note::
 
-      Using multiple security groups may deteriorate ECS network performance. You are suggested to select no more than five security groups.
+      Using multiple security groups may deteriorate ECS network performance. You are advised to select no more than five security groups.
 
 #. Click **OK**.
 
-.. |image1| image:: /_static/images/en-us_image_0093507575.png
+.. |image1| image:: /_static/images/en-us_image_0000002188678994.png
